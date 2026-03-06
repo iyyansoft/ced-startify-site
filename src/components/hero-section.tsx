@@ -167,28 +167,7 @@ export default function HeroSection() {
                 variants={fadeInUp}
                 className="flex flex-col items-center gap-3 w-full sm:w-auto flex-1"
               >
-                <div className="w-full">
-                  <p className="text-xs sm:text-sm text-[#7C3AED]/70 tracking-wider mb-2 text-center">In Association with</p>
-                  <div className="flex flex-row justify-center items-center gap-4 p-3 sm:p-4 rounded-xl w-full overflow-hidden"
-                    style={{
-                      background: "rgba(124,58,237,0.06)",
-                      backdropFilter: "blur(8px)",
-                      border: "1px solid rgba(124,58,237,0.15)",
-                    }}
-                  >
-                    <img
-                      src="/images/edii_logo.webp"
-                      alt="Edii Logo"
-                      className="h-10 w-auto max-w-[45%] object-contain"
-                    />
-                    <img
-                      src="/hcl.png"
-                      alt="HCL Logo"
-                      className="h-8 w-auto max-w-[45%] object-contain"
-                      style={{ mixBlendMode: "multiply" }}
-                    />
-                  </div>
-                </div>
+              
                 <div className="w-full">
                   <p className="text-xs sm:text-sm text-[#7C3AED]/70 tracking-wider mb-2 text-center whitespace-nowrap">Ticket Partner</p>
                   <div className="flex flex-row flex-wrap justify-center items-center gap-4 p-3 sm:p-4 rounded-xl w-full"

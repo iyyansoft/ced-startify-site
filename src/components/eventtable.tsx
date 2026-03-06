@@ -140,7 +140,7 @@ Teams must successfully complete their Round 1 sessions to be eligible for Round
   { category: "Events", name: "Startup Mughavari", dates: "To Be Announced"},
   { category: "Events", name: "Startup Atlas", dates: "To Be Announced" },
   { category: "Events", name: "Intern Hunt", dates: "To Be Announced" },
-  { category: "Events", name: "Founder Find", dates: "To Be Announced" },
+  // { category: "Events", name: "Founder Find", dates: "To Be Announced" },
   { category: "Pre-Finals", name: "Startup Cafe, GurusPitch, Pitch-X", dates: "April 28 - April 30, 2025" },
   { category: "Finals", name: "Startup Cafe", dates: "May 3 - May 4, 2025",mandatory: "📢 Place: CBE, Venue: To Be Announced" },
   { category: "Finals", name: "Pitch-X", dates: "May 3 - May 4, 2025",mandatory: "📢 Place: CBE, Venue: To Be Announced" },

@@ -50,7 +50,7 @@ export const events = [
   },
   {
     id: "gurus-pitch",
-    title: "Guru's Pitch",
+    title: "Faculty Pitch",
     description:
       "To recognize and celebrate the entrepreneurial spirit within academia. This award will highlight successful faculty-led startups that have made significant contributions to innovation and societal impact.",
     prizeAmount: "TBD",
@@ -67,16 +67,7 @@ export const events = [
     regFee: "625",
     imageSrc: "/images/intern-hunt.webp",
   },
-  {
-    id: "founder-find",
-    title: "Founder Find",
-    description:
-      "To facilitate the formation of strong startup teams by matching entrepreneurs with complementary skills. This event will help founders find key team members like co-founders, CEOs, CMOs, CFOs, CTOs.",
-    prizeAmount: "TBD",
-    regFee: "6250",
-    imageSrc: "/images/founder-find.webp",
-    eventzgoUrl: "https://www.eventzgo.com/events/j57cw7629bjmeqct5w4vq1ywv18276ce",
-  },
+
   {
     id: "path-finder",
     title: "StartUp Path Finder",
@@ -95,16 +86,7 @@ export const events = [
     regFee: "625",
     imageSrc: "/images/startup-district.webp",
   },
-  {
-    id: "scholars-spin-off",
-    title: "Scholar's Spin off",
-    description:
-      "The Research to Startup initiative aims to empower Ph.D. scholars from Tamil Nadu by bridging the gap between academic research and entrepreneurial ventures. This event is designed to provide a platform for 100 selected Ph.D. scholars to transform their research into viable startups through mentorship, networking, and hands-on guidance.",
-    prizeAmount: "TBD",
-    regFee: "1875",
-    imageSrc: "/images/scholars-spinoff.webp",
-    eventzgoUrl: "https://www.eventzgo.com/events/j572908d27454dzz73sd9s1f3s8295b9",
-  },
+
   {
     id: "social-x",
     title: "Social X – Innovation for Impact",
