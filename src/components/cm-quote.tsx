@@ -42,11 +42,12 @@ export default function CMQuote() {
             >
               {/* Custom open-quote marks */}
               <div
-                className="text-7xl font-serif leading-none mb-2 -mt-2"
+                className="text-7xl font-serif leading-none "
                 style={{
                   background: "linear-gradient(135deg, #a855f7, #ec4899)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
+                 
                 }}
               >
                 "
@@ -62,7 +63,7 @@ export default function CMQuote() {
                 We have set ourselves an ambitious target of becoming a $1
                 Trillion economy by 2030
               </p>
-              <div className="text-right text-5xl font-serif leading-none mb-4"
+              <div className="text-right text-5xl font-serif leading-none mb-2"
                 style={{
                   background: "linear-gradient(135deg, #a855f7, #ec4899)",
                   WebkitBackgroundClip: "text",

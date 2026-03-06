@@ -95,7 +95,7 @@ export default function Navbar() {
             >
               <Link to="/" className="flex items-center">
                 <img
-                  src="/startify_logo.png"
+                  src="/StartifyLogo.png"
                   alt="Startify Logo"
                   className="h-12 md:h-14 w-auto"
                 />

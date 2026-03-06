@@ -1,14 +1,5 @@
 export const events = [
-  {
-    id: "ip-to-ipo",
-    title: "IP to IPO",
-    description:
-      "Got a project or patent? Turn it into a startup!! Pitch now and walk out as a Founder.",
-    prizeAmount: "TBD",
-    regFee: "625",
-    imageSrc: "/images/ip-to-ipo.jpg",
-    eventzgoUrl: "https://www.eventzgo.com/events/j573vx282xzem32bygp76k3vrh827fx5",
-  },
+
   {
     id: "startup-cafe",
     title: "Startup Cafe Prototyping Hackathon",
@@ -19,6 +10,7 @@ export const events = [
     imageSrc: "/images/startup-cafe.webp",
     eventzgoUrl: "https://www.eventzgo.com/events/j57eawd6yzsz7s2xk3482mzrex8263yn",
   },
+
   {
     id: "pitch-x",
     title: "Pitch-X",
@@ -29,6 +21,40 @@ export const events = [
     imageSrc: "/images/pitch-x.webp",
     eventzgoUrl: "https://www.eventzgo.com/events/j57ah57hny092mffkn12xnnern827n9b",
   },
+
+  {
+    id: "gurus-pitch",
+    title: "Faculty Pitch",
+    description:
+      "To recognize and celebrate the entrepreneurial spirit within academia. This award will highlight successful faculty-led startups that have made significant contributions to innovation and societal impact.",
+    prizeAmount: "TBD",
+    regFee: "6250",
+    imageSrc: "/images/gurus-pitch.webp",
+    eventzgoUrl: "https://www.eventzgo.com/events/j573snp9c6mn44zqmdw8pqw8pn827nfk",
+  },
+
+    {
+    id: "social-x",
+    title: "Social X – Innovation for Impact",
+    description:
+      "A platform bridging social innovation and entrepreneurship, bringing together change-makers, startups, and impact investors to co-create solutions for real-world challenges.",
+    prizeAmount: "TBD",
+    regFee: "TBD",
+    imageSrc: "/images/startup-district.webp",
+    eventzgoUrl: "https://www.eventzgo.com/events/j575txsvh8zt9q8qy556bjfph9827az8",
+  },
+  {
+    id: "ip-to-ipo",
+    title: "IP to IPO",
+    description:
+      "Got a project or patent? Turn it into a startup!! Pitch now and walk out as a Founder.",
+    prizeAmount: "TBD",
+    regFee: "625",
+    imageSrc: "/images/ip-to-ipo.jpg",
+    eventzgoUrl: "https://www.eventzgo.com/events/j573vx282xzem32bygp76k3vrh827fx5",
+  },
+
+
   {
     id: "startup-mughavari",
     title: "Startup Mughavari",
@@ -48,16 +74,7 @@ export const events = [
     regFee: "/images/ecell-fees.webp",
     imageSrc: "/images/ecell-awards.webp",
   },
-  {
-    id: "gurus-pitch",
-    title: "Faculty Pitch",
-    description:
-      "To recognize and celebrate the entrepreneurial spirit within academia. This award will highlight successful faculty-led startups that have made significant contributions to innovation and societal impact.",
-    prizeAmount: "TBD",
-    regFee: "6250",
-    imageSrc: "/images/gurus-pitch.webp",
-    eventzgoUrl: "https://www.eventzgo.com/events/j573snp9c6mn44zqmdw8pqw8pn827nfk",
-  },
+
   {
     id: "intern-hunt",
     title: "Intern Hunt",
@@ -87,14 +104,5 @@ export const events = [
     imageSrc: "/images/startup-district.webp",
   },
 
-  {
-    id: "social-x",
-    title: "Social X – Innovation for Impact",
-    description:
-      "A platform bridging social innovation and entrepreneurship, bringing together change-makers, startups, and impact investors to co-create solutions for real-world challenges.",
-    prizeAmount: "TBD",
-    regFee: "TBD",
-    imageSrc: "/images/startup-district.webp",
-    eventzgoUrl: "https://www.eventzgo.com/events/j575txsvh8zt9q8qy556bjfph9827az8",
-  },
+
 ];

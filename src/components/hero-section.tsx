@@ -83,7 +83,7 @@ export default function HeroSection() {
               className="flex flex-wrap items-center justify-start text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight my-4 gap-0"
             >
               <img
-                src="/startify_logo.png"
+                src="/StartifyLogo.png"
                 alt="Startify Logo"
                 className="h-12 w-auto sm:h-20 md:h-32 drop-shadow-2xl"
               />
@@ -95,7 +95,7 @@ export default function HeroSection() {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                4.0
+                {/* 4.0 */}
               </span>
             </motion.h1>
             <motion.p
@@ -133,7 +133,7 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Logos row */}
-            <div className="flex flex-col items-stretch justify-between mt-8 gap-4 w-full">
+            <div className="flex flex-col items-stretch justify-between mt-12 gap-4 w-full ">
               <motion.div
                 variants={fadeInUp}
                 className="flex flex-col items-center w-full sm:w-auto"
@@ -169,7 +169,7 @@ export default function HeroSection() {
               >
               
                 <div className="w-full">
-                  <p className="text-xs sm:text-sm text-[#7C3AED]/70 tracking-wider mb-2 text-center whitespace-nowrap">Ticket Partner</p>
+                  <p className="text-xs sm:text-sm text-[#7C3AED]/70 tracking-wider mb-2 text-center whitespace-nowrap">Ticketing Partner</p>
                   <div className="flex flex-row flex-wrap justify-center items-center gap-4 p-3 sm:p-4 rounded-xl w-full"
                     style={{
                       background: "rgba(124,58,237,0.06)",

@@ -14,10 +14,11 @@ import {
 import { navlinks } from "@/data";
 
 const socialLinks = [
+    { href: "https://www.linkedin.com/company/centre-for-entrepreneurship-development-anna-university/", Icon: Linkedin, name: "LinkedIn" },
   { href: "https://www.facebook.com/Startify-Anna-University", Icon: Facebook, name: "Facebook" },
   { href: "https://x.com/startifyau", Icon: Twitter, name: "Twitter" },
   { href: "https://www.instagram.com/ced_au/", Icon: Instagram, name: "Instagram" },
-  { href: "https://www.linkedin.com/company/centre-for-entrepreneurship-development/posts/", Icon: Linkedin, name: "LinkedIn" },
+
 ];
 
 const policyLinks = [
@@ -70,9 +71,9 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <img src="/images/anna_univ_logo.webp" alt="Anna University" className="size-12" />
               <img src="/images/ced_logo.webp" alt="CED Logo" className="size-12" />
-              <img src="/startify_logo.png" alt="Startify 4.0" className="h-12 w-auto" />
+              <img src="/StartifyLogo.png" alt="Startify 4.0" className="h-12 w-auto" />
             </div>
-            <p className="text-sm text-[#7C3AED]/80 leading-relaxed text-center sm:text-left max-w-xs">
+            <p className="text-sm text-black leading-relaxed text-center sm:text-left max-w-xs">
               National Student Startup Ecosystem Conclave — fostering innovation, entrepreneurship & growth.
             </p>
             {/* Social icons */}
@@ -96,7 +97,7 @@ export default function Footer() {
                     (e.currentTarget as HTMLElement).style.borderColor = "rgba(124,58,237,0.2)";
                   }}
                 >
-                  <Icon className="h-4 w-4 text-[#7C3AED]/80 group-hover:text-[#7C3AED] transition-colors duration-300" />
+                  <Icon className="h-5 w-5 text-black group-hover:text-[#7C3AED] transition-colors duration-300" />
                 </a>
               ))}
             </div>
@@ -110,7 +111,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h2 className="mb-5 text-sm font-bold tracking-widest uppercase text-[#7C3AED]">
+            <h2 className="mb-5 text-sm font-bold tracking-widest uppercase text-black">
               Quick Links
             </h2>
             <nav className="flex flex-col gap-3">
@@ -118,7 +119,7 @@ export default function Footer() {
                 <a
                   key={navlink.name}
                   href={navlink.href}
-                  className="group flex items-center gap-2 text-sm text-[#7C3AED]/80 hover:text-[#7C3AED] transition-colors duration-300"
+                  className="group flex items-center gap-2 text-sm text-black hover:text-[#7C3AED] transition-colors duration-300"
                 >
                   <span
                     className="h-px w-4 bg-[#7C3AED]/40 group-hover:w-6 group-hover:bg-[#7C3AED] transition-all duration-300"
@@ -137,10 +138,10 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h2 className="mb-5 text-sm font-bold tracking-widest uppercase text-[#7C3AED]">
+            <h2 className="mb-5 text-sm font-bold tracking-widest uppercase text-black">
               Contact Us
             </h2>
-            <div className="flex flex-col gap-4 text-sm text-[#7C3AED]/80">
+            <div className="flex flex-col gap-4 text-sm text-black">
               <a
                 href="https://www.google.com/maps/dir//302,+2nd+Floor,+Platinum+Jubilee+Building+AC+Tech+Campus,+Sardar+Patel+Rd,+Anna+University,+Guindy,+Chennai,+Tamil+Nadu+600025/@13.0087452,80.1550457,12z"
                 target="_blank"
@@ -177,7 +178,7 @@ export default function Footer() {
           >
             <h2 className="mb-5 text-sm font-bold tracking-widest uppercase text-[#7C3AED] flex items-center gap-2">
               <Ticket className="size-4 shrink-0 text-[#7C3AED]" />
-              Ticket Partner
+              Ticketing Partner
             </h2>
             <a
               href="https://eventzgo.com"
@@ -208,7 +209,7 @@ export default function Footer() {
                 className="absolute top-2 right-2 size-3 text-[#7C3AED]/40 group-hover:text-[#7C3AED] transition-colors duration-300"
               />
             </a>
-            <p className="mt-3 text-xs text-[#7C3AED]/70 text-center sm:text-left">
+            <p className="mt-3 text-xs text-black text-center sm:text-left">
               Official ticketing partner for Startify 4.0
             </p>
           </motion.div>
@@ -224,7 +225,7 @@ export default function Footer() {
 
         {/* Bottom row */}
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-          <p className="text-xs text-[#7C3AED]/70">
+          <p className="text-xs text-black">
             © 2026 CED, Anna University. All rights reserved.
           </p>
 
@@ -233,30 +234,30 @@ export default function Footer() {
               <a
                 key={name}
                 href={href}
-                className="text-xs text-[#7C3AED]/80 hover:text-[#7C3AED] transition-colors duration-300"
+                className="text-xs text-black hover:text-[#7C3AED] transition-colors duration-300"
               >
                 {name}
               </a>
             ))}
           </div>
 
-          <p className="flex items-center text-xs text-[#7C3AED]/80">
+          <p className="flex items-center text-xs text-black">
             Designed with{" "}
             <Heart className="mx-1 size-3 text-pink-500" aria-label="love" /> by{" "}
             <a
               href="https://cibisuryaa.space"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-1 font-bold text-[#7C3AED] hover:text-[#5b21b6] transition-colors"
+              className="ml-1 font-bold text-black hover:text-[#5b21b6] transition-colors"
             >
               Cibi
             </a>
             {" & "}
             <a
-              href="https://www.linkedin.com/in/omprakash-d/"
+              href="https://www.linkedin.com/company/centre-for-entrepreneurship-development-anna-university/"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-1 font-bold text-[#7C3AED] hover:text-[#5b21b6] transition-colors"
+              className="ml-1 font-bold text-black hover:text-[#5b21b6] transition-colors"
             >
               Om
             </a>
