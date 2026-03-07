@@ -14,7 +14,7 @@ import {
 import { navlinks } from "@/data";
 
 const socialLinks = [
-    { href: "https://www.linkedin.com/company/centre-for-entrepreneurship-development-anna-university/", Icon: Linkedin, name: "LinkedIn" },
+  { href: "https://www.linkedin.com/company/centre-for-entrepreneurship-development-anna-university/", Icon: Linkedin, name: "LinkedIn" },
   { href: "https://www.facebook.com/Startify-Anna-University", Icon: Facebook, name: "Facebook" },
   { href: "https://x.com/startifyau", Icon: Twitter, name: "Twitter" },
   { href: "https://www.instagram.com/ced_au/", Icon: Instagram, name: "Instagram" },
@@ -176,8 +176,8 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <h2 className="mb-5 text-sm font-bold tracking-widest uppercase text-[#7C3AED] flex items-center gap-2">
-              <Ticket className="size-4 shrink-0 text-[#7C3AED]" />
+            <h2 className="mb-5 text-sm font-bold tracking-widest uppercase text-black flex items-center gap-2">
+              <Ticket className="size-4 shrink-0 text-black" />
               Ticketing Partner
             </h2>
             <a
