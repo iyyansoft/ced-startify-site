@@ -44,10 +44,10 @@ export default function RefundPolicy() {
               <li>
                 Users must submit a refund request via email to{" "}
                 <a
-                  href="mailto:refunds@austartify.com"
+                  href="mailto:cedau.outreach@gmail.com"
                   className="text-[#7C3AED] font-medium hover:underline"
                 >
-                  refunds@austartify.com
+                  cedau.outreach@gmail.com
                 </a>{" "}
                 within 7 days of payment.
               </li>
@@ -60,7 +60,7 @@ export default function RefundPolicy() {
 
           <section className="p-6 rounded-2xl border border-red-100 bg-red-50/40 hover:border-red-200 transition-colors duration-300">
             <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
-              <span className="w-6 h-6 rounded-full bg-red-100 text-red-500 text-xs font-bold flex items-center justify-center shrink-0">
+              <span className="w-6 h-6 rounded-full bg-red-100 text-[#7C3AED] text-xs font-bold flex items-center justify-center shrink-0">
                 3
               </span>
               Non-Refundable Scenarios
