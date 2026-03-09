@@ -6,9 +6,8 @@ interface AboutCardProps {
   id: string;
   title: string;
   description: string;
-  imageSrc: string;
   eventzgoUrl?: string;
-
+  buttonText?: string;
 }
 
 const cardBase: React.CSSProperties = {
@@ -26,10 +25,10 @@ const cardHovered: React.CSSProperties = {
 };
 
 export default function AboutCard({
-  id,
   title,
   description,
   eventzgoUrl,
+  buttonText,
 }: AboutCardProps) {
   const [hovered, setHovered] = useState(false);
 
@@ -59,42 +58,8 @@ export default function AboutCard({
         {description}
       </p>
 
-      {/* Buy button */}
-      {/* {eventzgoUrl ? (
-   
-        <a
-          href={eventzgoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group relative flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-sm font-bold text-[#7C3AED] bg-white overflow-hidden transition-all duration-300"
-          style={{
-            border: "1px solid rgba(255,255,255,1)",
-          }}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.9)";
-            (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px rgba(255,255,255,0.4)";
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLElement).style.background = "#ffffff";
-            (e.currentTarget as HTMLElement).style.boxShadow = "none";
-          }}
-        >
-          <ShoppingCart className="size-4 shrink-0" />
-          Register
-          <ExternalLink className="size-3 opacity-60 group-hover:opacity-100 transition-opacity" />
-        </a>
-      ) : (
-        <span className="flex items-center justify-center w-full py-2.5 px-4 rounded-xl text-xs font-semibold text-white/70 border border-white/20 bg-white/5">
-          Registration Opens Soon
-        </span>
-      )}
-    </div> */}
-
-
-
-
       {/* Button */}
-      {id === "startup-cafe" && eventzgoUrl ? (
+      {eventzgoUrl ? (
         <a
           href={eventzgoUrl}
           target="_blank"
@@ -115,12 +80,12 @@ export default function AboutCard({
           }}
         >
           <ShoppingCart className="size-4 shrink-0" />
-          Register
+          {buttonText || "Register"}
           <ExternalLink className="size-3 opacity-60 group-hover:opacity-100 transition-opacity" />
         </a>
       ) : (
         <span className="flex items-center justify-center w-full py-2.5 px-4 rounded-xl text-sm font-semibold text-white border border-white/20 bg-white/5">
-          Stay Tuned
+          {buttonText || "Stay Tuned"}
         </span>
       )}
     </div>

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import AboutCard from "@/components/about-card";
 import { events } from "@/data";
 
-const listedEvents = events.filter((e) => e.eventzgoUrl);
+const listedEvents = events;
 
 export default function AboutEvent() {
   return (
@@ -75,7 +75,7 @@ export default function AboutEvent() {
           designed to inspire, learn, and connect.
         </motion.p>
 
-        {/* Cards grid — only events with Eventzgo links */}
+        {/* Cards grid — showing all events */}
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl md:mx-auto gap-5 w-full">
           {listedEvents.map((event, index) => (
             <motion.div
