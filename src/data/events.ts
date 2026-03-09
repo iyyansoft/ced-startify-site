@@ -52,7 +52,7 @@ export const events = [
     id: "lab2launch",
     title: "Lab2Launch",
     description:
-      "To provide startups with a platform to showcase their products and innovations to potential investors, customers, and partners. One team/incubator in Tamil Nadu will be offered a reserved slot in the startup showroom. This event will serve as a launchpad for scaling up.",
+      "Transform innovative laboratory research into market-ready products and solutions.Bridge the gap between scientific discovery and real-world business opportunities through development, testing, and commercialization.",
 
   },
 
@@ -60,7 +60,7 @@ export const events = [
     id: "Research-to-Startup",
     title: "Research-to-Startup",
     description:
-      "To provide startups with a platform to showcase their products and innovations to potential investors, customers, and partners. One team/incubator in Tamil Nadu will be offered a reserved slot in the startup showroom. This event will serve as a launchpad for scaling up.",
+      "Transform research ideas and innovations into successful startup ventures.Support the journey from scientific discovery to real-world business solutions.",
 
   },
 
@@ -68,7 +68,7 @@ export const events = [
     id: "kadAI",
     title: "kadAI",
     description:
-      "To provide startups with a platform to showcase their products and innovations to potential investors, customers, and partners. One team/incubator in Tamil Nadu will be offered a reserved slot in the startup showroom. This event will serve as a launchpad for scaling up.",
+      "Empowering grassroots innovators to build solutions using Artificial Intelligence.Supporting local ideas to grow into scalable, technology-driven ventures.Bridging AI innovation with community needs to create real-world impact.",
 
   },
 
@@ -76,7 +76,7 @@ export const events = [
     id: "IMPRENT",
     title: "IMPRENT",
     description:
-      "To provide startups with a platform to showcase their products and innovations to potential investors, customers, and partners. One team/incubator in Tamil Nadu will be offered a reserved slot in the startup showroom. This event will serve as a launchpad for scaling up.",
+      "Empowering rural innovators to develop sustainable and impactful ventures.Supporting grassroots entrepreneurship through mentorship, resources, and innovation.Creating opportunities for local communities to grow through enterprise development.",
 
   },
 
@@ -85,7 +85,7 @@ export const events = [
     id: "Industry Grand Challenge",
     title: "Industry Grand Challenge",
     description:
-      "To provide startups with a platform to showcase their products and innovations to potential investors, customers, and partners. One team/incubator in Tamil Nadu will be offered a reserved slot in the startup showroom. This event will serve as a launchpad for scaling up.",
+      "Engage innovators and startups to address real-world industry challenges.Encourage practical solutions through collaboration with industry experts.Drive innovation that creates impactful and scalable business outcomes. ",
 
   },
 
