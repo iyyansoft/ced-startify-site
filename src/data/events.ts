@@ -104,5 +104,17 @@ export const events = [
     imageSrc: "/images/startup-district.webp",
   },
 
+    {
+    id: "lab2launch",
+    title: "Lab2Launch",
+    description:
+      "To provide startups with a platform to showcase their products and innovations to potential investors, customers, and partners. One team/incubator in Tamil Nadu will be offered a reserved slot in the startup showroom. This event will serve as a launchpad for scaling up.",
+    prizeAmount: "TBD",
+    regFee: "625",
+    imageSrc: "/images/startup-district.webp",
+  },
+
+
+
 
 ];
