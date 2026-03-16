@@ -204,7 +204,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <img
-                src="/cm.png.png"
+                src="/images/tamilnadu-removebg-preview.png"
                 alt="Hon'ble Chief Minister and Deputy Chief Minister of Tamil Nadu"
                 className="max-w-full h-auto"
                 style={{ width: 440, mixBlendMode: "multiply" }}
@@ -249,11 +249,11 @@ export default function HeroSection() {
                 </p>
                 <div className="h-px w-full mb-3" style={{ background: "linear-gradient(90deg, transparent, rgba(168,85,247,0.4), transparent)" }} />
                 <div className="flex items-center gap-3">
-                  <img
+                  {/* <img
                     src="/images/cm_image.webp"
                     alt="Thiru. M.K. Stalin"
                     className="h-11 w-11 rounded-full object-cover ring-2 ring-purple-400/40"
-                  />
+                  /> */}
                   <div>
                     <p className="text-sm font-bold text-gray-800">Thiru. M.K. Stalin</p>
                     <p className="text-xs text-gray-500">Hon'ble Chief Minister of Tamil Nadu</p>
