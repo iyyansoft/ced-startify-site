@@ -8,6 +8,7 @@ interface AboutCardProps {
   description: string;
   eventzgoUrl?: string;
   buttonText?: string;
+  onView: (id: string) => void;
 }
 
 const cardBase: React.CSSProperties = {
@@ -25,10 +26,12 @@ const cardHovered: React.CSSProperties = {
 };
 
 export default function AboutCard({
+  id,
   title,
   description,
   eventzgoUrl,
   buttonText,
+  onView,
 }: AboutCardProps) {
   const [hovered, setHovered] = useState(false);
 
@@ -59,35 +62,36 @@ export default function AboutCard({
       </p>
 
       {/* Button */}
-      {eventzgoUrl ? (
-        <a
-          href={eventzgoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group relative flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-sm font-bold text-[#7C3AED] bg-white overflow-hidden transition-all duration-300"
-          style={{
-            border: "1px solid rgba(255,255,255,1)",
-          }}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLElement).style.background =
-              "rgba(255,255,255,0.9)";
-            (e.currentTarget as HTMLElement).style.boxShadow =
-              "0 0 20px rgba(255,255,255,0.4)";
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLElement).style.background = "#ffffff";
-            (e.currentTarget as HTMLElement).style.boxShadow = "none";
-          }}
-        >
-          <ShoppingCart className="size-4 shrink-0" />
-          {buttonText || "Register"}
-          <ExternalLink className="size-3 opacity-60 group-hover:opacity-100 transition-opacity" />
-        </a>
-      ) : (
-        <span className="flex items-center justify-center w-full py-2.5 px-4 rounded-xl text-sm font-semibold text-white border border-white/20 bg-white/5">
-          {buttonText || "Stay Tuned"}
-        </span>
-      )}
+{/* Buttons */}
+<div className="flex gap-3 w-full">
+
+  {/* REGISTER or STAY TUNED */}
+  {eventzgoUrl ? (
+    <a
+      href={eventzgoUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-sm font-bold text-[#7C3AED] bg-white"
+    >
+      <ShoppingCart className="size-4" />
+      {buttonText || "Register"}
+      <ExternalLink className="size-3" />
+    </a>
+  ) : (
+    <span className="flex-1 flex items-center justify-center py-2.5 px-4 rounded-xl text-sm font-semibold text-white border border-white/20 bg-white/5">
+      {buttonText || "Stay Tuned"}
+    </span>
+  )}
+
+  {/* VIEW BUTTON (ALL CARDS) */}
+  <button
+    className="flex-1 py-2.5 px-4 rounded-xl text-sm font-bold text-white border border-white/40 hover:bg-white/10 transition"
+    onClick={() => onView(id)}   // 🔥 popup trigger
+  >
+    View
+  </button>
+
+</div>
     </div>
   );
 }

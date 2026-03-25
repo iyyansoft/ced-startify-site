@@ -6,6 +6,53 @@ export const events = [
     description:
       "This hackathon is a multi-stage event designed to guide participants from ideation to prototyping. Participants will engage in workshops, mentorship sessions, and periodic evaluations to refine their prototypes.",
     eventzgoUrl: "https://www.eventzgo.com/events/j57eawd6yzsz7s2xk3482mzrex8263yn",
+    fullDetails: `Startup cafe:
+
+Startup Café is a Prototyping Hackathon aligned with SDG Goals/National Missions specifically designed for students of Tamil Nadu to stimulate sustainable innovation.
+The Startup Café will focus on addressing problem statements aligned with SDG Goals/National Missions gathered through the CED Innovation Drive. The Startup Café will be conducted in several stages to include students from across all regions of TN. CED will also offer valuable mentoring and support to innovations emerging from Startup Café via CED Pre-incubation. The outcomes of Startup Café will be industry ready technology transfer/commercialization, patenting of innovations and viable startups. Outstanding innovations in Startup Cafe will receive seed grants upto Rs. 10 Lakhs for the development of their products and Startups.
+Process Flow:
+🔹 Step 1: Team Registration
+•	Teams can have a maximum of 3 members 
+•	Registration Fee: ₹500 + applicable charges 
+•	Submission of team details through the official platform
+🔹 Step 2: Online Bootcamp
+Orientation and training sessions on:
+•	Ideation 
+•	Design Thinking 
+•	Business Model Development 
+•	Prototyping basics
+•  Guidance from mentors and experts
+🔹 Step 3: Idea Submission
+Teams submit:
+•	Problem statement 
+•	Proposed solution 
+•	Initial concept / prototype idea
+Note: Template will be given
+🔹 Step 4: District Level Pitching
+•   All the registered teams will present at district-level evaluation 
+•  Evaluation by expert panel 
+•  Selection of Pre-finalists
+🔹 Step 5: Pre-Final Pitching
+•  Advanced evaluation by expert panel 
+•  Refinement of ideas with mentor feedback
+🔹 Step 6: Final Pitching
+•  Finalists present to a state-level jury 
+•  Selection of winning teams
+🔹 Step 7: Innovation Showcase
+Selected teams showcase their innovations at the Tamil Nadu Startup Summit organized by StartupTN
+🔹 Step 8: Pre-Incubation Programme
+•  Top teams undergo Pre-Incubation Programme at Centre for Entrepreneurship Development 
+•  Support includes: 
+•	Mentorship 
+•	Prototype development 
+•	Business validation
+•	Incubation Connect
+•	Further Funding Support
+•	Free Company Registration`
+
+
+
+
   },
 
   {

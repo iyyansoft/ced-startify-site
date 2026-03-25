@@ -1,11 +1,19 @@
 import { motion } from "framer-motion";
-
+import { useState } from "react";
 import AboutCard from "@/components/about-card";
 import { events } from "@/data";
+
+import { Dialog } from "@/components/ui/dialog";
+import EventDetailsDialog from "@/components/event-detail";
+
+
 
 const listedEvents = events;
 
 export default function AboutEvent() {
+
+  const [selectedEvent, setSelectedEvent] = useState<any>(null);
+
   return (
     <section
       id="about"
@@ -86,11 +94,39 @@ export default function AboutEvent() {
               transition={{ duration: 0.45, delay: index * 0.07 }}
               className="h-full"
             >
-              <AboutCard {...event} />
+              <AboutCard
+                {...event}
+                onView={(id) => {
+                  const found = listedEvents.find((e) => e.id === id);
+                  setSelectedEvent(found);
+                }}
+              />
             </motion.div>
           ))}
+
         </div>
+
       </div>
+
+      
+
+
+
+          <Dialog
+            open={!!selectedEvent}
+            onOpenChange={() => setSelectedEvent(null)}
+          >
+            {selectedEvent && (
+              <EventDetailsDialog
+                {...selectedEvent}
+                fullDetails={selectedEvent.fullDetails}
+                prizeAmount="₹10 Lakhs"
+                regFee="500"
+                imageSrc="/startup.jpg"
+                onApply={() => alert("Applied")}
+              />
+            )}
+          </Dialog>
     </section>
   );
 }
