@@ -54,7 +54,7 @@ export default function EventDetailsDialog({
       <div className="p-6">
 
         {/* ✅ CONDITION START */}
-        {id === "startup-cafe" && fullDetails ? (
+        {fullDetails && fullDetails.trim().length > 0 ? (
 
           <div className="space-y-6 max-h-[320px] overflow-y-auto pr-2">
 

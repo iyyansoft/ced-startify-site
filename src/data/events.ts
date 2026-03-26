@@ -61,6 +61,7 @@ Selected teams showcase their innovations at the Tamil Nadu Startup Summit organ
     description:
       "A platform for student startups and alumni (up to 3 years) startups to pitch their business plans to a panel of investors, providing opportunities for funding, mentorship, and networking.",
     // eventzgoUrl: "https://www.eventzgo.com/events/j57ah57hny092mffkn12xnnern827n9b",
+    // fullDetails:"hello"
   },
 
   {
