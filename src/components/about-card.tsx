@@ -88,7 +88,7 @@ export default function AboutCard({
     className="flex-1 py-2.5 px-4 rounded-xl text-sm font-bold text-white border border-white/40 hover:bg-white/10 transition"
     onClick={() => onView(id)}   // 🔥 popup trigger
   >
-    View
+    view Details
   </button>
 
 </div>
