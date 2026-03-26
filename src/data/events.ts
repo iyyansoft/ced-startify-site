@@ -60,8 +60,68 @@ Selected teams showcase their innovations at the Tamil Nadu Startup Summit organ
     title: "Pitch-X",
     description:
       "A platform for student startups and alumni (up to 3 years) startups to pitch their business plans to a panel of investors, providing opportunities for funding, mentorship, and networking.",
-    // eventzgoUrl: "https://www.eventzgo.com/events/j57ah57hny092mffkn12xnnern827n9b",
-    // fullDetails:"hello"
+    eventzgoUrl: "https://www.eventzgo.com/events/j57ah57hny092mffkn12xnnern827n9b",
+    fullDetails: `🚀 PITCH X – BUSINESS PLAN PITCHING COMPETITION
+Pitch • Validate • Grow • Fund
+A platform for Student Startups & Alumni Startups (up to 3 years) to present their business plans to a panel of investors.
+💡 Focus:
+•	No tech innovation required 
+•	Only business innovation solving real-life problems 
+🎁 Benefits:
+•	Funding opportunities 
+•	Expert mentorship 
+•	Investor networking 
+👥 WHO CAN PARTICIPATE?
+•	Students & Alumni (Startups up to 3 years) 
+•	Team size: Maximum 3 members 
+•	Registration Fee: ₹500 + Applicable Taxes 
+🔄 PROCESS FLOW
+1️⃣ Team Registration
+📝 Register your team and confirm participation
+
+2️⃣ Online Bootcamp
+🎓 Training on:
+•	Business Model Development 
+•	Market Validation 
+•	Pitch Deck Preparation 
+3️⃣ Idea Submission
+💡 Submit your business idea / plan
+ Evaluation based on:
+•	Problem-solution fit 
+•	Market potential 
+•	Business viability 
+
+4️⃣ District Level Pitching
+🎤 Present your idea at district level
+🏆 Top teams get shortlisted
+
+5️⃣ Pre-Final Pitching
+🧠 Expert mentoring & refinement
+📈 Strengthen your business model
+
+6️⃣ Final Pitching
+🏁 Pitch before investors & jury
+Selection of top startups
+
+7️⃣ Startup Showcase
+🎪 Showcase at
+StartupTN’s Global Startup Summit & Other SUmmmts
+
+8️⃣ Pre-Incubation Programme
+🏫 At Centre for Entrepreneurship Development
+📌 Support Includes:
+•	Mentorship 
+•	Business validation 
+•	Go-to-market strategy 
+💰 OPPORTUNITIES
+🚀 Funding Access
+🤝 Investor Connect
+📊 Business Mentorship
+🌐 Networking
+
+🔗 ONE LINE FLOW
+Register → Learn → Submit → Pitch → Refine → Final → Showcase → Incubate
+  `
   },
 
   {

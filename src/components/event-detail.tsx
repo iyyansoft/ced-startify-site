@@ -40,12 +40,16 @@ export default function EventDetailsDialog({
       </div>
 
       {/* IMAGE (ONLY FIRST CARD) */}
-      {id === "startup-cafe" && (
+      {(id === "startup-cafe" || id === "pitch-x") && (
         <div className="px-6 pt-4">
           <img
-            src="/images/startifyposter.jpeg"
+            src={
+              id === "startup-cafe"
+                ? "/images/startifyposter.jpeg"
+                : "/images/pichx.jpeg"
+            }
             alt={title}
-            className="w-screen h-[1000px] object-cover rounded-xl"
+            className="w-full h-[1100px] object-cover rounded-xl"
           />
         </div>
       )}
@@ -174,15 +178,15 @@ export default function EventDetailsDialog({
         </div>
 
         {/* BUTTON */}
-        {eventzgoUrl && id === "startup-cafe" && (
+        {eventzgoUrl && (
           <button
-            className="w-full mt-6 py-3 rounded-xl text-white font-semibold transition-all duration-300 hover:opacity-90"
+            className="w-full mt-6 py-3 rounded-xl text-white font-semibold text-lg tracking-wide transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
             style={{
-              background: "linear-gradient(90deg, #7c3aed, #a855f7)",
+              background: "linear-gradient(90deg, #7c3aed, #a855f7, #c026d3)",
             }}
             onClick={() => window.open(eventzgoUrl, "_blank")}
           >
-            Register Now
+            🚀 Register Now
           </button>
         )}
 
