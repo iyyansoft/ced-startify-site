@@ -13,13 +13,12 @@ interface EventDetailsProps {
   fullDetails: string;
 }
 
+
 export default function EventDetailsDialog({
   id,
   title,
-
   prizeAmount,
   regFee,
-
   eventzgoUrl,
   fullDetails,
 }: EventDetailsProps) {
@@ -40,19 +39,25 @@ export default function EventDetailsDialog({
       </div>
 
       {/* IMAGE (ONLY FIRST CARD) */}
-      {(id === "startup-cafe" || id === "pitch-x") && (
+      {(id === "startup-cafe" || id === "pitch-x" || id === "gurus-pitch") && (
         <div className="px-6 pt-4">
           <img
             src={
               id === "startup-cafe"
                 ? "/images/startifyposter.jpeg"
-                : "/images/pichx.jpeg"
+                : id === "pitch-x"
+                  ? "/images/pichx.jpeg"
+                  : id === "gurus-pitch"
+                    ? "/images/faculty.jpeg"
+                    : ""
             }
             alt={title}
-            className="w-full h-[1100px] object-cover rounded-xl"
+            className="w-full h-[1150px] object-cover rounded-xl"
           />
         </div>
       )}
+
+
 
       {/* CONTENT */}
       <div className="p-6">
@@ -172,6 +177,7 @@ export default function EventDetailsDialog({
             <p className="text-xs text-gray-500 mt-2">Prize</p>
             <p className="font-semibold text-purple-700">{prizeAmount}</p>
           </div>
+
 
 
 

@@ -129,7 +129,58 @@ Register → Learn → Submit → Pitch → Refine → Final → Showcase → In
     title: "Faculty Pitch",
     description:
       "To recognize and celebrate the entrepreneurial spirit within academia. This award will highlight successful faculty-led startups that have made significant contributions to innovation and societal impact.",
-    // eventzgoUrl: "https://www.eventzgo.com/events/j573snp9c6mn44zqmdw8pqw8pn827nfk",
+    eventzgoUrl: "https://www.eventzgo.com/events/j573snp9c6mn44zqmdw8pqw8pn827nfk",
+    fullDetails:` Faculty Pitch
+
+🔹 Step 1: Team Registration
+•  Open to faculty members (individual / team) 
+•  Registration Fee: ₹500 + applicable taxes 
+•  Basic details: idea summary, domain, problem statement, team credentials
+
+🔹 Step 2: Online Bootcamp
+Structured sessions on:
+•	Problem validation (most people fail here) 
+•	Business Model Canvas 
+•	Market analysis 
+•	Prototype strategy 
+•	Pitch preparation
+
+🔹 Step 3: Idea Submission
+Submission of:
+•	Pitch Deck (PPT) 
+•	Problem-Solution Fit 
+•	Market Opportunity 
+•	Early validation (if any)
+🔹 Step 4: Pre-Final Pitching
+Evaluation criteria:
+•	Problem relevance 
+•	Innovation 
+•	Feasibility 
+•	Market potential
+Shortlisted teams undergo: 
+•	Mentoring refinement 
+•	Business viability check 
+•  Focus: Can this become a company?
+
+
+🔹 Step 5: Final Pitching
+• Finalists pitch before: 
+•	Industry experts 
+•	Investors 
+•	Incubators 
+•  Selection of top startups
+
+🔹 Step 6: Pre-Incubation Programme
+At Centre for Entrepreneurship Development Anna University
+•	Structured support: 
+o	Prototype development 
+o	Business mentoring 
+o	Go-to-market strategy 
+•	Funding Opportunity: 
+o	₹3 Lakhs – ₹10 Lakhs (Seed Grant for prototype) 
+•	Special Support: 
+o	Financial assistance for company incorporation (Women Faculty) 
+ `
   },
 
   {
