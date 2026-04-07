@@ -1,0 +1,328 @@
+/* --- Startify 4.0 Exact Color Palette --- */
+:root {
+  --startify-deep-purple: #3b1161; /* The dark button color */
+  --startify-vibrant-purple: #7432ff; /* The 4.0 text color */
+  --startify-light-purple: #f3ebff; /* Backgrounds */
+  --startify-glow: rgba(116, 50, 255, 0.4); /* The purple shadow glow */
+  --grid-color: rgba(116, 50, 255, 0.05); /* Very faint purple grid */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.chat-widget-container {
+  position: fixed;
+  bottom: 80px;
+  right: 17px;
+  z-index: 9999;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+/* --- 1. The Floating Icon (Matching the glowing buttons) --- */
+.chat-bot-icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--startify-deep-purple);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  /* Replicating the glowing drop shadow from the "Register Now" button */
+  box-shadow: 0 8px 25px var(--startify-glow);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.chat-bot-icon:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px var(--startify-glow);
+}
+
+.chat-widget-container.open .chat-bot-icon {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8) translateY(20px);
+}
+
+/* --- 2. The Chat Widget --- */
+.chat-widget {
+  position: absolute;
+  bottom: 85px;
+  right: 0;
+  width: 360px;
+  max-width: calc(100vw - 48px);
+  height: 370px;
+  max-height: calc(100vh - 120px);
+  background-color: #ffffff;
+  border-radius: 24px;
+  /* Replicating the soft card shadow from the bottom card in the image */
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(116, 50, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  pointer-events: none;
+}
+
+.chat-widget-container.open .chat-widget {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* --- 3. Header (Matching the floating nav bar) --- */
+.chat-header {
+  padding: 15px 15px 5px 15px;
+  background-color: white;
+  z-index: 2;
+}
+
+/* Creating the pill shape inside the header */
+.header-pill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(116, 50, 255, 0.08); /* Soft purple shadow */
+  border: 1px solid rgba(116, 50, 255, 0.05);
+}
+
+.logo-placeholder {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo-icon {
+  font-size: 1.1rem;
+  color: var(--startify-vibrant-purple);
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.5px;
+}
+
+.logo-text-p1 {
+  color: #1a1a1a;
+}
+.logo-text-p2 {
+  color: var(--startify-vibrant-purple);
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: var(--startify-vibrant-purple);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.close-button:hover {
+  opacity: 1;
+}
+
+/* --- 4. Messages Window (With the exact Grid Background) --- */
+.messages-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  /* The signature Startify 4.0 Grid Background */
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: 25px 25px;
+}
+
+.message-bubble {
+  max-width: 85%;
+  padding: 12px 16px;
+  border-radius: 16px;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.message-bubble.user {
+  background-color: #ffffff;
+  color: #333;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.message-bubble.bot {
+  background-color: var(--startify-light-purple);
+  color: #2d0a4e; /* Dark purple text for readability */
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+/* --- 5. Input Area --- */
+.input-area {
+  display: flex;
+  padding: 16px;
+  background: white;
+  border-top: 1px solid rgba(116, 50, 255, 0.1);
+  z-index: 2;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid rgba(116, 50, 255, 0.2);
+  border-radius: 24px;
+  outline: none;
+  font-size: 0.95rem;
+  background-color: #faf8ff;
+  transition:
+    border-color 0.2s,
+    background-color 0.2s;
+}
+
+.input-area input:focus {
+  border-color: var(--startify-vibrant-purple);
+  background-color: white;
+}
+
+/* Replicating the "Register Now" button perfectly */
+.input-area button {
+  margin-left: 12px;
+  padding: 0 20px;
+  background-color: var(--startify-deep-purple);
+  color: white;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 4px 15px var(--startify-glow);
+  transition: all 0.2s ease;
+}
+
+.input-area button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px var(--startify-glow);
+}
+
+.input-area button:disabled {
+  background-color: #a89bc2;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* Typing indicator */
+.typing-indicator span {
+  animation: blink 1.4s infinite both;
+  color: var(--startify-vibrant-purple);
+  font-weight: bold;
+}
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+/* --- Markdown Styling inside Chat Bubbles --- */
+
+.message-bubble p {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.message-bubble p:last-child {
+  margin-bottom: 0;
+}
+
+/* Make bold text pop with the Startify theme */
+.message-bubble strong {
+  color: var(--startify-deep-purple);
+  font-weight: 700;
+}
+
+/* User bubbles should keep white text if they use bold */
+.message-bubble.user strong {
+  color: #111;
+}
+
+/* --- Styling Lists & Steps --- */
+.message-bubble ol,
+.message-bubble ul {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 0;
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Adds nice spacing between steps */
+}
+
+.message-bubble li {
+  line-height: 1.4;
+  margin-left: 5px;
+  padding-left: 5px;
+}
+
+/* Beautiful custom numbers for ordered lists (steps) */
+.message-bubble ol {
+  list-style-type: none; /* Hide default numbers */
+  counter-reset: step-counter;
+}
+
+.message-bubble ol li {
+  position: relative;
+  padding-left: 30px; /* Make room for custom number */
+}
+
+.message-bubble ol li::before {
+  counter-increment: step-counter;
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 22px;
+  height: 22px;
+  background-color: var(--startify-vibrant-purple);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  box-shadow: 0 2px 6px var(--startify-glow);
+}

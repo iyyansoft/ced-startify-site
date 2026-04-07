@@ -4,6 +4,8 @@ import AboutEvent from "@/components/about-event";
 import Footer from "@/components/footer";
 import HeroSection from "@/components/hero-section";
 import NotificationButton from "@/components/notification";
+import ChatWidget from "@/components/ChatWidget/ChatWidget.tsx";
+
 
 
 
@@ -19,7 +21,9 @@ export default function Home() {
 
       {/* <FAQSection /> */}
       <Footer />
+  
       <NotificationButton />
+      <ChatWidget />
 
 
 
