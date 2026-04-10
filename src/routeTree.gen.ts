@@ -13,6 +13,7 @@ import { createFileRoute } from '@tanstack/react-router'
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as BeneficiariesImport } from './routes/beneficiaries'
 import { Route as IndexImport } from './routes/index'
 
 // Create Virtual Routes
@@ -45,6 +46,12 @@ const PrivacyPolicyLazyRoute = PrivacyPolicyLazyImport.update({
   import('./routes/privacy-policy.lazy').then((d) => d.Route),
 )
 
+const BeneficiariesRoute = BeneficiariesImport.update({
+  id: '/beneficiaries',
+  path: '/beneficiaries',
+  getParentRoute: () => rootRoute,
+} as any)
+
 const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
@@ -60,6 +67,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/beneficiaries': {
+      id: '/beneficiaries'
+      path: '/beneficiaries'
+      fullPath: '/beneficiaries'
+      preLoaderRoute: typeof BeneficiariesImport
       parentRoute: typeof rootRoute
     }
     '/privacy-policy': {
@@ -90,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/beneficiaries': typeof BeneficiariesRoute
   '/privacy-policy': typeof PrivacyPolicyLazyRoute
   '/refund-policy': typeof RefundPolicyLazyRoute
   '/terms-and-conditions': typeof TermsAndConditionsLazyRoute
@@ -97,6 +112,7 @@ export interface FileRoutesByFullPath {
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/beneficiaries': typeof BeneficiariesRoute
   '/privacy-policy': typeof PrivacyPolicyLazyRoute
   '/refund-policy': typeof RefundPolicyLazyRoute
   '/terms-and-conditions': typeof TermsAndConditionsLazyRoute
@@ -105,6 +121,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/beneficiaries': typeof BeneficiariesRoute
   '/privacy-policy': typeof PrivacyPolicyLazyRoute
   '/refund-policy': typeof RefundPolicyLazyRoute
   '/terms-and-conditions': typeof TermsAndConditionsLazyRoute
@@ -114,14 +131,21 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/beneficiaries'
     | '/privacy-policy'
     | '/refund-policy'
     | '/terms-and-conditions'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/privacy-policy' | '/refund-policy' | '/terms-and-conditions'
+  to:
+    | '/'
+    | '/beneficiaries'
+    | '/privacy-policy'
+    | '/refund-policy'
+    | '/terms-and-conditions'
   id:
     | '__root__'
     | '/'
+    | '/beneficiaries'
     | '/privacy-policy'
     | '/refund-policy'
     | '/terms-and-conditions'
@@ -130,6 +154,7 @@ export interface FileRouteTypes {
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BeneficiariesRoute: typeof BeneficiariesRoute
   PrivacyPolicyLazyRoute: typeof PrivacyPolicyLazyRoute
   RefundPolicyLazyRoute: typeof RefundPolicyLazyRoute
   TermsAndConditionsLazyRoute: typeof TermsAndConditionsLazyRoute
@@ -137,6 +162,7 @@ export interface RootRouteChildren {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BeneficiariesRoute: BeneficiariesRoute,
   PrivacyPolicyLazyRoute: PrivacyPolicyLazyRoute,
   RefundPolicyLazyRoute: RefundPolicyLazyRoute,
   TermsAndConditionsLazyRoute: TermsAndConditionsLazyRoute,
@@ -153,6 +179,7 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
+        "/beneficiaries",
         "/privacy-policy",
         "/refund-policy",
         "/terms-and-conditions"
@@ -160,6 +187,9 @@ export const routeTree = rootRoute
     },
     "/": {
       "filePath": "index.tsx"
+    },
+    "/beneficiaries": {
+      "filePath": "beneficiaries.tsx"
     },
     "/privacy-policy": {
       "filePath": "privacy-policy.lazy.tsx"

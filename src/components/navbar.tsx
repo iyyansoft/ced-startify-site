@@ -17,21 +17,39 @@ const NavLink = ({
   children: React.ReactNode;
 }) => {
   return (
-    <motion.a
-      className="relative text-[#7C3AED] transition-colors duration-200"
-      whileHover="hover"
-      href={href}
-    >
-      {children}
-      <motion.span
-        className="absolute left-0 bottom-0 w-full h-0.5 bg-[#7C3AED]"
-        initial={{ scaleX: 0 }}
-        variants={{
-          hover: { scaleX: 1 },
-        }}
-        transition={{ duration: 0.2 }}
-      />
-    </motion.a>
+    // <motion.a
+    //   className="relative text-[#7C3AED] transition-colors duration-200"
+    //   whileHover="hover"
+    //   href={href}
+    // >
+    //   {children}
+    //   <motion.span
+    //     className="absolute left-0 bottom-0 w-full h-0.5 bg-[#7C3AED]"
+    //     initial={{ scaleX: 0 }}
+    //     variants={{
+    //       hover: { scaleX: 1 },
+    //     }}
+    //     transition={{ duration: 0.2 }}
+    //   />
+    // </motion.a>
+
+
+    <motion.div whileHover="hover">
+      <Link
+        to={href}
+        className="relative text-[#7C3AED] transition-colors duration-200"
+      >
+        {children}
+        <motion.span
+          className="absolute left-0 bottom-0 w-full h-0.5 bg-[#7C3AED]"
+          initial={{ scaleX: 0 }}
+          variants={{
+            hover: { scaleX: 1 },
+          }}
+          transition={{ duration: 0.2 }}
+        />
+      </Link>
+    </motion.div>
   );
 };
 
@@ -44,18 +62,30 @@ const MobileNavLink = ({
   children: React.ReactNode;
   onClick: () => void;
 }) => (
-  <a
-    href={href}
-    className={cn(
-      buttonVariants({
-        variant: "ghost",
-      }),
-      "w-full justify-start"
-    )}
-    onClick={onClick}
-  >
-    {children}
-  </a>
+  // <a
+  //   href={href}
+  //   className={cn(
+  //     buttonVariants({
+  //       variant: "ghost",
+  //     }),
+  //     "w-full justify-start"
+  //   )}
+  //   onClick={onClick}
+  // >
+  //   {children}
+  // </a>
+
+  <Link
+  to={href}
+  className={cn(
+    buttonVariants({ variant: "ghost" }),
+    "w-full justify-start"
+  )}
+  onClick={onClick}
+>
+  {children}
+</Link>
+
 );
 
 export default function Navbar() {

@@ -8,11 +8,10 @@ import NotificationButton from "@/components/notification";
 
 
 
-
-
-
-
 export default function Home() {
+
+
+  
   return (
     <>
       <HeroSection />
@@ -20,13 +19,13 @@ export default function Home() {
 
 
       {/* <FAQSection /> */}
-      <Footer />
+      
+      {/* <Footer /> */}
   
       <NotificationButton />
       {/* <ChatWidget /> */}
-
-
-
+     
+      
 
     </>
   );

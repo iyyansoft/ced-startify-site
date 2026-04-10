@@ -1,15 +1,15 @@
 export const navlinks = [
   {
     name: "Home",
-    href: "#home",
+    href: "/",
   },
   {
     name: "About",
     href: "#about",
   },
   {
-    name: "Highlights",
-    href: "#highlights",
+    name: "3.0 Beneficiaries",
+    href: "/beneficiaries",
   },
   {
     name: "FAQs",
