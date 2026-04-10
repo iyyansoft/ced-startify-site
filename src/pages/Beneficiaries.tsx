@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 
 export default function Beneficiaries() {
   const data = [
-    { img: "/images/Tri.jpeg", company: "Tri", amount: "₹1,00,000" },
-    { img: "/images/intra.jpeg", company: " Intra Mobility and Precision Systems Private Limited (IMPS)", amount: "₹3,00,000" },
+    { img: "/images/Curio Clothing.jpeg", company: "Curio Clothing", amount: "₹2,72,700" },
+    { img: "/images/EdgeSphere.jpeg", company: "EdgeSphere", amount: "₹3,00,000" },
+   
     { img: "/images/Grainforge.jpeg", company: "Grainforge Technologies", amount: "₹3,00,000" },
     { img: "/images/Niya Therapy.jpeg", company: "Niya Therapy", amount: "₹3,00,000" },
     { img: "/images/CEG Motorsports.jpeg", company: "CEG Motorsports", amount: "₹2,97,000" },
@@ -15,14 +16,8 @@ export default function Beneficiaries() {
     { img: "/images/8 bix 2.jpeg", company: "8 Bix 2", amount: "₹2,97,000" },
     { img: "/images/AnimalTradeX.jpeg", company: "AnimalTradeX", amount: "₹3,00,000" },
     { img: "/images/VitaSafe.jpg", company: "VitaSafe", amount: "₹3,00,000" },
-    { img: "/images/MOTOR-X.jpeg", company: "Motor-x India Mobility Private Limited", amount: "₹7,00,000" },
-    { img: "/images/ATOMAKI.jpeg", company: "Atomaki", amount: "₹3,00,000" },
-    { img: "/images/Evoxia Labs.jpg", company: "Evoxia Labs", amount: "₹5,00,000" },
-    { img: "/images/CarboNergy Consultancy.JPG", company: "arboNergy Consultancy", amount: "₹2,00,000" },
-    { img: "/images/Hue Enterprises.jpeg", company: "Hue Enterprises", amount: "₹1,60,000" },
-    { img: "/images/Singorison.jpg", company: "Singorison", amount: "₹2,00,000" },
-    { img: "/images/Vividobots.jpg", company: "Vividobots (Formerly Known as PB Innovative Solutions)", amount: "₹1,96,000" },
-    { img: "/images/Space Cold Tech.jpg", company: "Space Cold Tech", amount: "₹2,20,000" },
+     { img: "/images/SafeSTride.jpeg", company: "SafeSTride", amount: "₹2,65,500" },
+
   ];
 
   return (
@@ -73,10 +68,10 @@ export default function Beneficiaries() {
       </motion.div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
 
         {data.map((item, index) => (
-          <div key={index} className="relative w-full h-[450px] group">
+          <div key={index} className="relative w-full h-[350px] group">
 
             {/* Back Layer 1 */}
             <div className="absolute inset-0 bg-purple-500 rounded-xl rotate-6 scale-95 opacity-40 group-hover:rotate-3 transition duration-300"></div>
@@ -117,15 +112,15 @@ export default function Beneficiaries() {
 
           </div>
         ))}
-        
+
 
       </div>
-  
 
-      
+
+
     </div>
-    
+
   );
 
-  
+
 }
