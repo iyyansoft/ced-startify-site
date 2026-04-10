@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Footer from "@/components/footer";
+
 
 export default function Beneficiaries() {
   const data = [
