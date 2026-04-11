@@ -6,6 +6,8 @@ export default function Beneficiaries() {
     { img: "/images/Curio Clothing.jpeg", company: "Curio Clothing", amount: "₹2,72,700" },
     { img: "/images/EdgeSphere.jpeg", company: "EdgeSphere", amount: "₹3,00,000" },
     { img: "/images/Learnsphere.jpeg", company: "Learnsphere", amount: "₹2,97,000" },
+    { img: "/images/UPI_DIRECT.jpeg", company: "UPI.DIRECT", amount: "₹3,00,000" },
+    { img: "/images/SafeSTride.jpeg", company: "SafeSTride", amount: "₹2,65,500" },
     { img: "/images/Grainforge.jpeg", company: "Grainforge Technologies", amount: "₹3,00,000" },
     { img: "/images/Niya Therapy.jpeg", company: "Niya Therapy", amount: "₹3,00,000" },
     { img: "/images/CEG Motorsports.jpeg", company: "CEG Motorsports", amount: "₹2,97,000" },
@@ -16,7 +18,7 @@ export default function Beneficiaries() {
     { img: "/images/8 bix 2.jpeg", company: "8 Bix 2", amount: "₹2,97,000" },
     { img: "/images/AnimalTradeX.jpeg", company: "AnimalTradeX", amount: "₹3,00,000" },
     { img: "/images/VitaSafe.jpg", company: "VitaSafe", amount: "₹3,00,000" },
-    { img: "/images/SafeSTride.jpeg", company: "SafeSTride", amount: "₹2,65,500" },
+    
 
   ];
 
@@ -68,53 +70,50 @@ export default function Beneficiaries() {
       </motion.div>
 
       {/* Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
-        {data.map((item, index) => (
-          <div key={index} className="relative w-full h-[350px] group">
+  {data.map((item, index) => (
+    <motion.div
+      key={index}
+      className="relative w-full h-[300px] rounded-2xl p-[2px] bg-gradient-to-br from-purple-500 via-pink-500 to-indigo-500 group"
+      initial={{ opacity: 0, y: 60 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.05 }}
+      whileHover={{ rotateX: 6, rotateY: -6, scale: 1.05 }}
+      style={{ transformStyle: "preserve-3d" }}
+    >
 
-            {/* Back Layer 1 */}
-            <div className="absolute inset-0 bg-purple-500 rounded-xl rotate-6 scale-95 opacity-40 group-hover:rotate-3 transition duration-300"></div>
+      {/* Card Inner */}
+      <div className="relative w-full h-full rounded-2xl overflow-hidden bg-black">
 
-            {/* Back Layer 2 */}
-            <div className="absolute inset-0 bg-pink-500 rounded-xl -rotate-6 scale-95 opacity-40 group-hover:-rotate-3 transition duration-300"></div>
+        {/* Image */}
+        <img
+          src={item.img}
+          alt={item.company}
+          className="w-full h-full object-contain p-3 transition duration-500 group-hover:scale-110"
+        />
 
-            {/* Main Card */}
-            <motion.div
-              className="relative z-10 w-full h-full rounded-xl overflow-hidden shadow-2xl"
-              whileHover={{ scale: 1.08, y: -10 }}
-              transition={{ type: "spring", stiffness: 200 }}
-            >
+        {/* Slide-up Content */}
+        <div className="absolute bottom-0 left-0 w-full bg-black/80 backdrop-blur-md p-4 translate-y-full group-hover:translate-y-0 transition duration-300">
 
-              {/* Image */}
-              <img
-                src={item.img}
-                alt={item.company}
-                className="w-full h-full object-cover"
-              />
+          <p className="text-xs text-white">Company</p>
+          <h2 className="text-lg font-bold text-white">
+            {item.company}
+          </h2>
 
-              {/* Hover Content */}
-              <div className="absolute inset-0 bg-black/70 flex flex-col justify-end p-5 opacity-0 group-hover:opacity-100 transition duration-300">
+          <p className="text-xs text-gray-400 mt-2">Amount</p>
+          <p className="text-lg font-semibold text-green-400">
+            {item.amount}
+          </p>
 
-                <p className="text-sm text-gray-300">Company:</p>
-                <h2 className="text-xl font-bold text-white">
-                  {item.company}
-                </h2>
-
-                <p className="text-sm text-gray-300 mt-2">Amount:</p>
-                <h3 className="text-lg font-semibold text-green-400">
-                  {item.amount}
-                </h3>
-
-              </div>
-
-            </motion.div>
-
-          </div>
-        ))}
-
+        </div>
 
       </div>
+
+    </motion.div>
+  ))}
+
+</div>
 
 
 
