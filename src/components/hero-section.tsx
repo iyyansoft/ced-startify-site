@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import ImageSlider from "@/components/slider";
 
 import { Separator } from "@/components/ui/separator";
 import GradientButton from "@/components/gradient-button";
@@ -196,7 +197,10 @@ export default function HeroSection() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            {/* CM Image */}
+
+
+            <ImageSlider />
+            {/* CM Image
             <motion.div
               className="flex justify-center lg:justify-end"
               initial={{ opacity: 0, scale: 0.9 }}
@@ -209,7 +213,7 @@ export default function HeroSection() {
                 className="max-w-full h-auto"
                 style={{ width: 440, mixBlendMode: "multiply" }}
               />
-            </motion.div>
+            </motion.div> */}
 
             {/* CM Quote Card */}
             <motion.div
