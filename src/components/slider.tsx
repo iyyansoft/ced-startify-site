@@ -42,7 +42,7 @@ export default function ImageSlider() {
   }, []);
 
   // 🖱️ mouse move
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const { clientX, clientY } = e;
     setPos({
       x: (clientX - window.innerWidth / 2) / 40,
@@ -66,11 +66,16 @@ export default function ImageSlider() {
   />
 
   {/* 🔥 MAIN IMAGE */}
-  <motion.img
-    key={index}
-    src={images[index]}
-    className="absolute w-full h-full object-contain"
-  />
+ <motion.img
+  key={index}
+  src={images[index]}
+  className="absolute w-full h-full object-contain"
+  animate={{
+    x: pos.x,
+    y: pos.y,
+    scale: 1.1,
+  }}
+/>
 </>
 
       {/* 🔥 DARK OVERLAY */}
