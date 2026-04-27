@@ -4,7 +4,7 @@ import AboutEvent from "@/components/about-event";
 
 import HeroSection from "@/components/hero-section";
 import NotificationButton from "@/components/notification";
-// import ChatWidget from "@/components/ChatWidget/ChatWidget.tsx";
+import ChatWidget from "@/components/ChatWidget/ChatWidget.tsx";
 
 
 
@@ -16,17 +16,12 @@ export default function Home() {
     <>
       <HeroSection />
       <AboutEvent />
-
-
       {/* <FAQSection /> */}
-      
-      {/* <Footer /> */}
-  
-      <NotificationButton />
-      {/* <ChatWidget /> */}
-     
-      
+      {/* <Footer /> */}  
 
+      <NotificationButton />
+      <ChatWidget />
+     
     </>
   );
 

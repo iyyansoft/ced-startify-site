@@ -66,7 +66,9 @@ const ChatWidget: React.FC = () => {
 
     try {
       const response = await fetch(
-        "https://ganeshsprofessional-austartify-rag-backend.hf.space/api/chat",
+        // "https://ganeshsprofessional-austartify-rag-backend.hf.space/api/chat",
+        "https://priyaangel61003-austartify-backend-dev.hf.space/api/chat",
+        // "http://localhost:8000/api/chat",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

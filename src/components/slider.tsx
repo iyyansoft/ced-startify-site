@@ -37,7 +37,7 @@ export default function ImageSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
-    }, 4000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -74,6 +74,10 @@ export default function ImageSlider() {
     x: pos.x,
     y: pos.y,
     scale: 1.1,
+  }}
+    transition={{
+    duration: 0.2, // smaller = faster
+    ease: "easeOut",
   }}
 />
 </>
