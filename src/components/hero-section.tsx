@@ -134,7 +134,7 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Logos row */}
-            <div className="flex flex-col items-stretch justify-between mt-12 gap-4 w-full ">
+            <div className="flex flex-col items-stretch justify-between mt-32 gap-4 w-full ">
               <motion.div
                 variants={fadeInUp}
                 className="flex flex-col items-center w-full sm:w-auto"
@@ -168,7 +168,7 @@ export default function HeroSection() {
                 variants={fadeInUp}
                 className="flex flex-col items-center gap-3 w-full sm:w-auto flex-1"
               >
-              
+              <br></br>
                 <div className="w-full">
                   <p className="text-xs sm:text-sm text-[#7C3AED]/70 tracking-wider mb-2 text-center whitespace-nowrap">Ticketing Partner</p>
                   <div className="flex flex-row flex-wrap justify-center items-center gap-4 p-3 sm:p-4 rounded-xl w-full"
@@ -198,22 +198,53 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
 
+            {/* Tamil nadu image        */}
+<motion.div
+  className="
+    flex
+    justify-center
+    lg:justify-end
+    mt-10
+    lg:mt-0
+  "
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.6, delay: 0.3 }}
+>
+
+  <img
+    src="/images/cm.png"
+    alt="Tamil Nadu Vijay Design"
+    className="
+      w-full
+      max-w-[220px]
+      sm:max-w-[300px]
+      md:max-w-[380px]
+      lg:max-w-[500px]
+      xl:max-w-[560px]
+      h-auto
+      object-contain
+    "
+  />
+
+</motion.div>
+                <div className="flex items-center gap-3">
+                  <img
+                    src="/images/cm_vijay.jpg"
+                    alt="cm_Vijay"
+                    className="h-11 w-11 rounded-full object-cover ring-2 ring-purple-400/40"
+                  />
+                  <div>
+                    <p className="text-xs font-bold text-gray-800">C. Joseph Vijay</p>
+                    <p className="text-xs text-gray-500">Hon'ble Chief Minister of Tamil Nadu</p>
+                  </div>
+                </div>
+
+                <br></br>
+
 
             <ImageSlider />
-            {/* CM Image
-            <motion.div
-              className="flex justify-center lg:justify-end"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <img
-                src="/images/tamilnadu-removebg-preview.png"
-                alt="Hon'ble Chief Minister and Deputy Chief Minister of Tamil Nadu"
-                className="max-w-full h-auto"
-                style={{ width: 440, mixBlendMode: "multiply" }}
-              />
-            </motion.div> */}
+
 
             {/* CM Quote Card */}
             <motion.div
@@ -222,48 +253,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="w-full"
             >
-              <div
-                className="relative flex w-full flex-col items-start justify-center overflow-hidden rounded-2xl border p-6"
-                style={{
-                  background: "linear-gradient(135deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 100%)",
-                  backdropFilter: "blur(20px)",
-                  border: "1px solid rgba(124,58,237,0.2)",
-                  boxShadow: "0 4px 24px rgba(124,58,237,0.1)",
-                }}
-              >
-                <div
-                  className="text-5xl font-serif leading-none mb-2"
-                  style={{
-                    background: "linear-gradient(135deg, #a855f7, #ec4899)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
-                  "
-                </div>
-                <p
-                  className="text-base sm:text-lg font-semibold leading-snug mb-3"
-                  style={{
-                    background: "linear-gradient(135deg, #1e3a8a, #4c1d95)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
-                  We have set ourselves an ambitious target of becoming a $1 Trillion economy by 2030
-                </p>
-                <div className="h-px w-full mb-3" style={{ background: "linear-gradient(90deg, transparent, rgba(168,85,247,0.4), transparent)" }} />
-                <div className="flex items-center gap-3">
-                  {/* <img
-                    src="/images/cm_image.webp"
-                    alt="Thiru. M.K. Stalin"
-                    className="h-11 w-11 rounded-full object-cover ring-2 ring-purple-400/40"
-                  /> */}
-                  <div>
-                    <p className="text-sm font-bold text-gray-800">Thiru. M.K. Stalin</p>
-                    <p className="text-xs text-gray-500">Hon'ble Chief Minister of Tamil Nadu</p>
-                  </div>
-                </div>
-              </div>
+
             </motion.div>
           </motion.div>
         </div>
