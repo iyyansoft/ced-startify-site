@@ -10,7 +10,7 @@ export default function Beneficiaries() {
     { img: "/images/SafeSTride.jpeg", company: "SafeSTride", amount: "₹2,65,500" },
     { img: "/images/Grainforge.jpeg", company: "Grainforge Technologies", amount: "₹3,00,000" },
     { img: "/images/Niya Therapy.jpeg", company: "Niya Therapy", amount: "₹3,00,000" },
-    { img: "/images/CEG Motorsports.jpeg", company: "CEG Motorsports", amount: "₹2,97,000" },
+    { img: "/images/CEG_Motorsports.jpeg", company: "CEG Motorsports", amount: "₹2,97,000" },
     { img: "/images/Neurotronix.jpeg", company: "Neurotronix", amount: "₹3,00,000" },
     { img: "/images/Vision Solve.jpeg", company: "Vision Solve", amount: "₹3,00,000" },
     { img: "/images/AQUAHOLICS.jpeg", company: "Aquaholics", amount: "₹3,00,000" },
@@ -18,6 +18,14 @@ export default function Beneficiaries() {
     { img: "/images/8 bix 2.jpeg", company: "8 Bix 2", amount: "₹2,97,000" },
     { img: "/images/AnimalTradeX.jpeg", company: "AnimalTradeX", amount: "₹3,00,000" },
     { img: "/images/VitaSafe.jpg", company: "VitaSafe", amount: "₹3,00,000" },
+
+
+    { img: "/images/intra.jpeg", company: "Intra Mobility and Precision System Pvt Ltd", amount: "₹3,00,000" },
+    { img: "/images/ATOMAKI.jpeg", company: "Automaki", amount: "₹2,00,000" },
+    { img: "/images/MOTOR-X.jpeg", company: "MotorX Mobility Private Limited", amount: "₹7,00,000" },
+    { img: "/images/Ennamopenupbro.jpeg", company: "Ennamopenupbro Compute Technologies (P) Ltd", amount: "₹3,00,000" },
+
+
     
 
   ];
