@@ -187,13 +187,13 @@ o	Financial assistance for company incorporation (Women Faculty)
  `
   },
 
-  // {
-  //   id: "social-x",
-  //   title: "Social X – Innovation for Impact",
-  //   description:
-  //     "A platform bridging social innovation and entrepreneurship, bringing together change-makers, startups, and impact investors to co-create solutions for real-world challenges.",
-  //   eventzgoUrl: "https://www.eventzgo.com/events/j575txsvh8zt9q8qy556bjfph9827az8",
-  // },
+  {
+    id: "social-x",
+    title: "Social X – Innovation for Impact",
+    description:
+      "A platform bridging social innovation and entrepreneurship, bringing together change-makers, startups, and impact investors to co-create solutions for real-world challenges.",
+    eventzgoUrl: "https://www.eventzgo.com/events/j575txsvh8zt9q8qy556bjfph9827az8",
+  },
 
   {
     id: "ip-to-ipo",
@@ -211,13 +211,7 @@ o	Financial assistance for company incorporation (Women Faculty)
   },
 
 
-  // {
-  //   id: "lab2launch",
-  //   title: "Lab2Launch",
-  //   description:
-  //     "Transform innovative laboratory research into market-ready products and solutions.Bridge the gap between scientific discovery and real-world business opportunities through development, testing, and commercialization.",
-  //   // eventzgoUrl: "https://www.eventzgo.com/events/j57bq65wzwcb1gpaj9tfzvfbw5826wqt",
-  // },
+
 
   {
     id: "Research-to-Startup",
@@ -227,30 +221,38 @@ o	Financial assistance for company incorporation (Women Faculty)
     eventzgoUrl: "https://www.eventzgo.com/events/j57fbnbrft09er3xv3fzs4rp5587xsjm",
   },
 
-  // {
-  //   id: "kadAI",
-  //   title: "kadAI",
-  //   description:
-  //     "Empowering grassroots innovators to build solutions using Artificial Intelligence.Supporting local ideas to grow into scalable, technology-driven ventures.Bridging AI innovation with community needs to create real-world impact.",
+    {
+    id: "lab2launch",
+    title: "Lab2Launch",
+    description:
+      "Transform innovative laboratory research into market-ready products and solutions.Bridge the gap between scientific discovery and real-world business opportunities through development, testing, and commercialization.",
+    // eventzgoUrl: "https://www.eventzgo.com/events/j57bq65wzwcb1gpaj9tfzvfbw5826wqt",
+  },
 
-  // },
+  {
+    id: "kadAI",
+    title: "kadAI",
+    description:
+      "Empowering grassroots innovators to build solutions using Artificial Intelligence.Supporting local ideas to grow into scalable, technology-driven ventures.Bridging AI innovation with community needs to create real-world impact.",
 
-  // {
-  //   id: "IMPRENT",
-  //   title: "IMPRENT",
-  //   description:
-  //     "Empowering rural innovators to develop sustainable and impactful ventures.Supporting grassroots entrepreneurship through mentorship, resources, and innovation.Creating opportunities for local communities to grow through enterprise development.",
+  },
 
-  // },
+  {
+    id: "Kutti Story",
+    title: "Kutti Story",
+    description:
+      "Empowering rural innovators to develop sustainable and impactful ventures.Supporting grassroots entrepreneurship through mentorship, resources, and innovation.Creating opportunities for local communities to grow through enterprise development.",
+
+  },
 
 
-  // {
-  //   id: "Industry Grand Challenge",
-  //   title: "Industry Grand Challenge",
-  //   description:
-  //     "Engage innovators and startups to address real-world industry challenges.Encourage practical solutions through collaboration with industry experts.Drive innovation that creates impactful and scalable business outcomes. ",
+  {
+    id: "Industry Grand Challenge",
+    title: "Industry Grand Challenge",
+    description:
+      "Engage innovators and startups to address real-world industry challenges.Encourage practical solutions through collaboration with industry experts.Drive innovation that creates impactful and scalable business outcomes. ",
 
-  // },
+  },
 
 
 
