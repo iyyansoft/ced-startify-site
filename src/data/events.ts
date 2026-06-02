@@ -124,6 +124,10 @@ Register → Learn → Submit → Pitch → Refine → Final → Showcase → In
   `
   },
 
+
+
+  
+
   {
     id: "gurus-pitch",
     title: "Faculty Pitch",
@@ -183,70 +187,70 @@ o	Financial assistance for company incorporation (Women Faculty)
  `
   },
 
-  {
-    id: "social-x",
-    title: "Social X – Innovation for Impact",
-    description:
-      "A platform bridging social innovation and entrepreneurship, bringing together change-makers, startups, and impact investors to co-create solutions for real-world challenges.",
-    // eventzgoUrl: "https://www.eventzgo.com/events/j575txsvh8zt9q8qy556bjfph9827az8",
-  },
+  // {
+  //   id: "social-x",
+  //   title: "Social X – Innovation for Impact",
+  //   description:
+  //     "A platform bridging social innovation and entrepreneurship, bringing together change-makers, startups, and impact investors to co-create solutions for real-world challenges.",
+  //   eventzgoUrl: "https://www.eventzgo.com/events/j575txsvh8zt9q8qy556bjfph9827az8",
+  // },
 
   {
     id: "ip-to-ipo",
     title: "IP to IPO",
     description:
       "Got a project or patent? Turn it into a startup!! Pitch now and walk out as a Founder.",
-    buttonText: "Stay Tuned"
+    eventzgoUrl: "https://www.eventzgo.com/events/j573vx282xzem32bygp76k3vrh827fx5",
   },
   {
     id: "startup-mughavari",
     title: "Startup Mughavari",
     description:
       "Aimed at helping students with validated innovations to register their startups, the startup sprint drive will be held during the conclave to assist in different stages (early-stage ideas, mid-stage validation, incorporation) of company formation and patent filing.",
-
+    eventzgoUrl: "https://www.eventzgo.com/events/j57bq65wzwcb1gpaj9tfzvfbw5826wqt",
   },
 
 
-  {
-    id: "lab2launch",
-    title: "Lab2Launch",
-    description:
-      "Transform innovative laboratory research into market-ready products and solutions.Bridge the gap between scientific discovery and real-world business opportunities through development, testing, and commercialization.",
-
-  },
+  // {
+  //   id: "lab2launch",
+  //   title: "Lab2Launch",
+  //   description:
+  //     "Transform innovative laboratory research into market-ready products and solutions.Bridge the gap between scientific discovery and real-world business opportunities through development, testing, and commercialization.",
+  //   // eventzgoUrl: "https://www.eventzgo.com/events/j57bq65wzwcb1gpaj9tfzvfbw5826wqt",
+  // },
 
   {
     id: "Research-to-Startup",
     title: "Research-to-Startup",
     description:
       "Transform research ideas and innovations into successful startup ventures.Support the journey from scientific discovery to real-world business solutions.",
-
+    eventzgoUrl: "https://www.eventzgo.com/events/j57fbnbrft09er3xv3fzs4rp5587xsjm",
   },
 
-  {
-    id: "kadAI",
-    title: "kadAI",
-    description:
-      "Empowering grassroots innovators to build solutions using Artificial Intelligence.Supporting local ideas to grow into scalable, technology-driven ventures.Bridging AI innovation with community needs to create real-world impact.",
+  // {
+  //   id: "kadAI",
+  //   title: "kadAI",
+  //   description:
+  //     "Empowering grassroots innovators to build solutions using Artificial Intelligence.Supporting local ideas to grow into scalable, technology-driven ventures.Bridging AI innovation with community needs to create real-world impact.",
 
-  },
+  // },
 
-  {
-    id: "IMPRENT",
-    title: "IMPRENT",
-    description:
-      "Empowering rural innovators to develop sustainable and impactful ventures.Supporting grassroots entrepreneurship through mentorship, resources, and innovation.Creating opportunities for local communities to grow through enterprise development.",
+  // {
+  //   id: "IMPRENT",
+  //   title: "IMPRENT",
+  //   description:
+  //     "Empowering rural innovators to develop sustainable and impactful ventures.Supporting grassroots entrepreneurship through mentorship, resources, and innovation.Creating opportunities for local communities to grow through enterprise development.",
 
-  },
+  // },
 
 
-  {
-    id: "Industry Grand Challenge",
-    title: "Industry Grand Challenge",
-    description:
-      "Engage innovators and startups to address real-world industry challenges.Encourage practical solutions through collaboration with industry experts.Drive innovation that creates impactful and scalable business outcomes. ",
+  // {
+  //   id: "Industry Grand Challenge",
+  //   title: "Industry Grand Challenge",
+  //   description:
+  //     "Engage innovators and startups to address real-world industry challenges.Encourage practical solutions through collaboration with industry experts.Drive innovation that creates impactful and scalable business outcomes. ",
 
-  },
+  // },
 
 
 

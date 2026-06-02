@@ -39,23 +39,23 @@ export default function EventDetailsDialog({
       </div>
 
       {/* IMAGE (ONLY FIRST CARD) */}
-      {(id === "startup-cafe" || id === "pitch-x" || id === "gurus-pitch") && (
-        <div className="px-6 pt-4">
-          <img
-            src={
-              id === "startup-cafe"
-                ? "/images/startifyposter.jpeg"
-                : id === "pitch-x"
-                  ? "/images/pichx.jpeg"
-                  : id === "gurus-pitch"
-                    ? "/images/faculty.jpeg"
-                    : ""
-            }
-            alt={title}
-            className="w-full h-[1150px] object-cover rounded-xl"
-          />
-        </div>
-      )}
+{(id === "startup-cafe" || id === "pitch-x" || id === "gurus-pitch") && (
+  <div className="px-1 pt-4 flex justify-center">
+    <img
+      src={
+        id === "startup-cafe"
+          ? "/images/startifyposter.jpeg"
+          : id === "pitch-x"
+            ? "/images/pichx.jpeg"
+            : id === "gurus-pitch"
+              ? "/images/faculty_pich.jpeg"
+              : ""
+      }
+      alt={title}
+      className="w-[80%] h-auto object-contain rounded-xl"
+    />
+  </div>
+)}
 
 
 
