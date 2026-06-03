@@ -13,7 +13,7 @@
 
 .chat-widget-container {
   position: fixed;
-  bottom: 80px;
+  bottom: 40px;
   right: 17px;
   z-index: 9999;
   font-family:

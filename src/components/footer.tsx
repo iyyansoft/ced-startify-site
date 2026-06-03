@@ -245,7 +245,7 @@ export default function Footer() {
             Developed by{" "}
             <Heart className="mx-1 size-3 text-pink-500" aria-label="love" />{" "}
             <a
-              href="https://cibisuryaa.space"
+              href="https://www.iyyansoft.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-1 font-bold text-black hover:text-[#5b21b6] transition-colors"
