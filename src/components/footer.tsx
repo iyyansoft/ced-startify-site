@@ -242,25 +242,18 @@ export default function Footer() {
           </div>
 
           <p className="flex items-center text-xs text-black">
-            Designed with{" "}
-            <Heart className="mx-1 size-3 text-pink-500" aria-label="love" /> by{" "}
+            Developed by{" "}
+            <Heart className="mx-1 size-3 text-pink-500" aria-label="love" />{" "}
             <a
               href="https://cibisuryaa.space"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-1 font-bold text-black hover:text-[#5b21b6] transition-colors"
             >
-              Cibi
+             Iyyansoft
             </a>
-            {" & "}
-            <a
-              href="https://www.linkedin.com/company/centre-for-entrepreneurship-development-anna-university/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-1 font-bold text-black hover:text-[#5b21b6] transition-colors"
-            >
-              Om
-            </a>
+          
+
           </p>
         </div>
       </div>

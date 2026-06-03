@@ -15,10 +15,10 @@ export const navlinks = [
     name: "FAQs",
     href: "#faqs",
   },
-  {
-    name: "Contact",
-    href: "#contact",
-  },
+  // {
+  //   name: "Contact",
+  //   href: "#contact",
+  // },
 ];
 
 export const stats = [
