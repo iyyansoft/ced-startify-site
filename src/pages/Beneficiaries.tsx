@@ -24,6 +24,8 @@ export default function Beneficiaries() {
     { img: "/images/ATOMAKI.jpeg", company: "Automaki", amount: "₹2,00,000" },
     { img: "/images/MOTOR-X.jpeg", company: "MotorX Mobility Private Limited", amount: "₹7,00,000" },
     { img: "/images/Ennamopenupbro.jpeg", company: "Ennamopenupbro Compute Technologies (P) Ltd", amount: "₹3,00,000" },
+    { img: "/images/praveen_BB.jpeg", company: "Vision of PravIOT", amount: "₹2,88,000" },
+    { img: "/images/salonika.png", company: "PlumeXBio", amount: "₹2,99,977" },
 
 
     
