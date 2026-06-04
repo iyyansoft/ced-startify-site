@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import AboutCard from "@/components/about-card";
 import { events } from "@/data";
-import { X, Sparkles } from "lucide-react";
+import { X, Sparkles, Route } from "lucide-react";
 
 import { Dialog } from "@/components/ui/dialog";
 import EventDetailsDialog from "@/components/event-detail";
@@ -63,11 +63,23 @@ const eligibilityData = [
   },
 ];
 
+const roadmapSteps = [
+  "Click the Register Now button.",
+  "You will be redirected to the EventzGo registration page.",
+  "Click the + icon and select the required number of tickets.",
+  "Click Proceed to Checkout.",
+  "Fill in the contact details and all additional form fields.",
+  "Click Proceed to Pay.",
+  "Complete the payment process.",
+  "Click Submit to finish your registration.",
+];
+
 const listedEvents = events;
 
 export default function AboutEvent() {
   const [selectedEvent, setSelectedEvent] = useState<any>(null);
   const [showEligibility, setShowEligibility] = useState(false);
+  const [showRoadmap, setShowRoadmap] = useState(false);
 
   return (
     <section
@@ -138,20 +150,28 @@ export default function AboutEvent() {
           designed to inspire, learn, and connect.
         </motion.p>
 
-        {/* Eligibility Button */}
+        {/* Action Buttons Row */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mb-12"
+          className="flex flex-col sm:flex-row items-center gap-4 mb-12"
         >
           <button
             onClick={() => setShowEligibility(true)}
-            className="group flex items-center gap-2 bg-gradient-to-r from-[#7C3AED] via-[#8b5cf6] to-[#A855F7] text-white px-8 py-3.5 rounded-full font-bold shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/35 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
+            className="group flex items-center justify-center gap-3 bg-white text-[#7C3AED] border border-[#7C3AED] hover:bg-[#7C3AED]/5 px-8 py-3 rounded-2xl font-bold shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 w-full sm:w-auto"
           >
-            <span>View Eligibility Criteria</span>
-            <Sparkles className="size-4 text-pink-200 group-hover:scale-110 transition duration-300 shrink-0" />
+            <Sparkles className="size-5 text-[#7C3AED] transition-transform duration-300 group-hover:scale-110 shrink-0" />
+            <span className="font-spaceGrotesk text-base font-semibold">View Eligibility Criteria</span>
+          </button>
+
+          <button
+            onClick={() => setShowRoadmap(true)}
+            className="group flex items-center justify-center gap-3 bg-white text-[#7C3AED] border border-[#7C3AED] hover:bg-[#7C3AED]/5 px-8 py-3 rounded-2xl font-bold shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 w-full sm:w-auto"
+          >
+            <Route className="size-5 text-[#7C3AED] transition-transform duration-300 group-hover:scale-110 shrink-0" />
+            <span className="font-spaceGrotesk text-base font-semibold">Registration Roadmap</span>
           </button>
         </motion.div>
 
@@ -253,6 +273,71 @@ export default function AboutEvent() {
                       ))}
                     </tbody>
                   </table>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      {/* Registration Roadmap Modal */}
+      <AnimatePresence>
+        {showRoadmap && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md p-4">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+              className="relative w-full max-w-3xl max-h-[90vh] overflow-hidden rounded-[2rem] bg-white shadow-2xl border border-purple-100 flex flex-col"
+            >
+              {/* Header */}
+              <div className="relative bg-gradient-to-r from-[#5B21B6] via-[#7C3AED] to-[#A855F7] px-8 py-6 flex-shrink-0">
+                <button
+                  onClick={() => setShowRoadmap(false)}
+                  className="absolute top-5 right-5 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+                <div className="text-center">
+                  <h2 className="text-3xl font-black text-white uppercase tracking-wider font-spaceGrotesk">
+                    Registration Roadmap
+                  </h2>
+                  <p className="text-pink-100 mt-1 text-sm tracking-widest font-spaceGrotesk uppercase">
+                    Step-by-Step Guidelines
+                  </p>
+                </div>
+              </div>
+
+              {/* Roadmap Content (Timeline style) */}
+              <div className="p-8 bg-gray-50/50 overflow-y-auto flex-grow font-spaceGrotesk animate-popup">
+                <div className="relative border-l-2 border-[#7C3AED]/20 ml-4 md:ml-6 pl-6 md:pl-8 space-y-6 py-2">
+                  {roadmapSteps.map((stepText, index) => {
+                    const boldStepText = stepText
+                      .replace("Register Now", "<strong>Register Now</strong>")
+                      .replace("EventzGo", "<strong>EventzGo</strong>")
+                      .replace("+ icon", "<strong>+ icon</strong>")
+                      .replace("Proceed to Checkout", "<strong>Proceed to Checkout</strong>")
+                      .replace("Proceed to Pay", "<strong>Proceed to Pay</strong>")
+                      .replace("Submit", "<strong>Submit</strong>");
+
+                    return (
+                      <div key={index} className="relative group">
+                        {/* Timeline Circle Marker */}
+                        <div className="absolute -left-[39px] md:-left-[47px] top-0.5 size-7 md:size-8 bg-white border-2 border-[#7C3AED] rounded-full flex items-center justify-center font-bold text-sm md:text-base text-[#7C3AED] shadow-sm transition-colors duration-300 group-hover:bg-[#7C3AED] group-hover:text-white">
+                          {index + 1}
+                        </div>
+
+                        {/* Step content */}
+                        <div className="bg-white p-4 rounded-xl border border-purple-100/50 shadow-sm hover:border-[#7C3AED]/30 transition-all duration-300">
+                          <p
+                            className="text-gray-700 text-sm md:text-base leading-relaxed"
+                            dangerouslySetInnerHTML={{ __html: boldStepText }}
+                          />
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </motion.div>
