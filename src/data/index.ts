@@ -348,3 +348,4 @@ export const eCellAwards = [
 
 export * from "./events";
 export * from "./countries";
+export * from "./faqs";

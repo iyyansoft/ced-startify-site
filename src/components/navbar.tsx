@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -12,43 +12,59 @@ import { cn } from "@/lib/utils";
 const NavLink = ({
   href,
   children,
+  isHomePage,
 }: {
   href: string;
   children: React.ReactNode;
+  isHomePage: boolean;
 }) => {
+  const isHash = href.startsWith("#");
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (isHash && isHomePage) {
+      e.preventDefault();
+      const element = document.getElementById(href.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
-    // <motion.a
-    //   className="relative text-[#7C3AED] transition-colors duration-200"
-    //   whileHover="hover"
-    //   href={href}
-    // >
-    //   {children}
-    //   <motion.span
-    //     className="absolute left-0 bottom-0 w-full h-0.5 bg-[#7C3AED]"
-    //     initial={{ scaleX: 0 }}
-    //     variants={{
-    //       hover: { scaleX: 1 },
-    //     }}
-    //     transition={{ duration: 0.2 }}
-    //   />
-    // </motion.a>
-
-
     <motion.div whileHover="hover">
-      <Link
-        to={href}
-        className="relative text-[#7C3AED] transition-colors duration-200"
-      >
-        {children}
-        <motion.span
-          className="absolute left-0 bottom-0 w-full h-0.5 bg-[#7C3AED]"
-          initial={{ scaleX: 0 }}
-          variants={{
-            hover: { scaleX: 1 },
-          }}
-          transition={{ duration: 0.2 }}
-        />
-      </Link>
+      {isHash && isHomePage ? (
+        <a
+          href={href}
+          onClick={handleClick}
+          className="relative text-[#7C3AED] transition-colors duration-200"
+        >
+          {children}
+          <motion.span
+            className="absolute left-0 bottom-0 w-full h-0.5 bg-[#7C3AED]"
+            initial={{ scaleX: 0 }}
+            variants={{
+              hover: { scaleX: 1 },
+            }}
+            transition={{ duration: 0.2 }}
+          />
+        </a>
+      ) : (
+        <Link
+          to={isHash ? "/" : href}
+          hash={isHash ? href.substring(1) : undefined}
+          className="relative text-[#7C3AED] transition-colors duration-200"
+        >
+          {children}
+          <motion.span
+            className="absolute left-0 bottom-0 w-full h-0.5 bg-[#7C3AED]"
+            initial={{ scaleX: 0 }}
+            variants={{
+              hover: { scaleX: 1 },
+            }}
+            transition={{ duration: 0.2 }}
+          />
+        </Link>
+      )}
     </motion.div>
   );
 };
@@ -57,40 +73,61 @@ const MobileNavLink = ({
   href,
   children,
   onClick,
+  isHomePage,
 }: {
   href: string;
   children: React.ReactNode;
   onClick: () => void;
-}) => (
-  // <a
-  //   href={href}
-  //   className={cn(
-  //     buttonVariants({
-  //       variant: "ghost",
-  //     }),
-  //     "w-full justify-start"
-  //   )}
-  //   onClick={onClick}
-  // >
-  //   {children}
-  // </a>
+  isHomePage: boolean;
+}) => {
+  const isHash = href.startsWith("#");
 
-  <Link
-  to={href}
-  className={cn(
-    buttonVariants({ variant: "ghost" }),
-    "w-full justify-start"
-  )}
-  onClick={onClick}
->
-  {children}
-</Link>
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (isHash && isHomePage) {
+      e.preventDefault();
+      const element = document.getElementById(href.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+      onClick();
+    }
+  };
 
-);
+  if (isHash && isHomePage) {
+    return (
+      <a
+        href={href}
+        className={cn(
+          buttonVariants({ variant: "ghost" }),
+          "w-full justify-start text-left"
+        )}
+        onClick={handleClick}
+      >
+        {children}
+      </a>
+    );
+  }
+
+  return (
+    <Link
+      to={isHash ? "/" : href}
+      hash={isHash ? href.substring(1) : undefined}
+      className={cn(
+        buttonVariants({ variant: "ghost" }),
+        "w-full justify-start"
+      )}
+      onClick={onClick}
+    >
+      {children}
+    </Link>
+  );
+};
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -134,7 +171,7 @@ export default function Navbar() {
 
             <div className="hidden md:flex items-center space-x-6 text-[#7C3AED]">
               {navlinks.map((item) => (
-                <NavLink key={item.name} href={item.href}>
+                <NavLink key={item.name} href={item.href} isHomePage={isHomePage}>
                   {item.name}
                 </NavLink>
               ))}
@@ -167,6 +204,7 @@ export default function Navbar() {
                       <MobileNavLink
                         key={item.name}
                         href={item.href}
+                        isHomePage={isHomePage}
                         onClick={() => setIsOpen(false)}
                       >
                         {item.name}
