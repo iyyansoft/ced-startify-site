@@ -19,7 +19,7 @@ export const faqs: FAQItem[] = [
   {
     question: "How do I register for the event and what are the fees?",
     answer:
-      "You can easily register for Startify 4.0 online through our official ticketing partner, EventzGo. Simply click the 'Register Now' button in the navigation bar to see registration options and ticketing details. The registration fee is ₹500 (taxes included).",
+      "You can easily register for Startify 4.0 online through our official ticketing partner, EventzGo. Simply click the 'Register Now' button in the navigation bar to see registration options and ticketing details. The registration fee is Rs.500 + Taxes",
   },
 
   {
@@ -32,5 +32,11 @@ export const faqs: FAQItem[] = [
   question: "Can I participate as a team?",
   answer:
     "Yes, participants can register individually or as a team, depending on the event requirements.",
+},
+
+{
+  question: "What are the benefits of participating in Startify 4.0?",
+  answer:
+    "Participants will gain valuable exposure to the startup ecosystem, connect with industry experts, investors, mentors, and fellow innovators, showcase their ideas, receive feedback from professionals, explore funding opportunities, enhance entrepreneurial skills, and earn a participation certificate.",
 },
 ];
