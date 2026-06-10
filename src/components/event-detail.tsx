@@ -1,4 +1,5 @@
 import { DialogContent } from "@/components/ui/dialog";
+import { useState } from "react";
 
 
 interface EventDetailsProps {
@@ -22,6 +23,11 @@ export default function EventDetailsDialog({
   eventzgoUrl,
   fullDetails,
 }: EventDetailsProps) {
+
+  const [showCompanyPopup, setShowCompanyPopup] = useState(false);
+  const [message, setMessage] = useState("");
+
+
   return (
     <DialogContent className="sm:max-w-[700px] max-h-[90vh] overflow-y-auto p-0 border-0 bg-white rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.2)]">
 
@@ -190,13 +196,84 @@ export default function EventDetailsDialog({
             style={{
               background: "linear-gradient(90deg, #7c3aed, #a855f7, #c026d3)",
             }}
-            onClick={() => window.open(eventzgoUrl, "_blank")}
+            onClick={() => {
+  if (id === "startup-mughavari") {
+    setShowCompanyPopup(true);
+  } else {
+    window.open(eventzgoUrl, "_blank");
+  }
+}}
           >
             🚀 Register Now
           </button>
         )}
 
       </div>
+
+
+      {showCompanyPopup && (
+  <div className="fixed inset-0 z-[9999] bg-black/50 flex items-center justify-center">
+    <div className="bg-white rounded-2xl p-6 w-[90%] max-w-md shadow-xl">
+
+      <h2 className="text-2xl font-bold text-center mb-2">
+        Incorporated Company?
+      </h2>
+
+      <p className="text-center text-gray-600 mb-6">
+        Is your startup already incorporated?
+      </p>
+
+      <div className="flex justify-center gap-4">
+
+        <button
+          className="px-5 py-2 rounded-lg bg-green-600 text-white"
+          onClick={() => {
+            setMessage(
+              "This is only for new companies yet to be incorporated."
+            );
+          }}
+        >
+          Yes
+        </button>
+
+        <button
+          className="px-5 py-2 rounded-lg bg-purple-600 text-white"
+          onClick={() => {
+            window.open(
+              "https://www.eventzgo.com/events/j57bq65wzwcb1gpaj9tfzvfbw5826wqt",
+              "_blank"
+            );
+
+            setShowCompanyPopup(false);
+            setMessage("");
+          }}
+        >
+          No
+        </button>
+
+      </div>
+
+      {message && (
+        <div className="mt-4 bg-yellow-100 border border-yellow-300 rounded-lg p-3 text-center text-yellow-800">
+          {message}
+        </div>
+      )}
+
+      <div className="flex justify-center mt-4">
+        <button
+          className="text-gray-500"
+          onClick={() => {
+            setShowCompanyPopup(false);
+            setMessage("");
+          }}
+        >
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
+)}
 
     </DialogContent>
   );
