@@ -38,7 +38,8 @@ export default function AboutCard({
 }: AboutCardProps) {
   const [hovered, setHovered] = useState(false);
   const [showCompanyPopup, setShowCompanyPopup] = useState(false);
-  const [message, setMessage] = useState("");
+const [message, setMessage] = useState("");
+const [isRejected, setIsRejected] = useState(false);
 
   return (
     <>
@@ -71,8 +72,10 @@ export default function AboutCard({
             <button
               onClick={() => {
                 if (id === "startup-mughavari") {
-                  setShowCompanyPopup(true);
-                } else {
+  setMessage("");
+  setIsRejected(false);
+  setShowCompanyPopup(true);
+} else {
                   window.open(eventzgoUrl, "_blank");
                 }
               }}
@@ -103,10 +106,11 @@ export default function AboutCard({
           <div className="relative bg-white rounded-[30px] shadow-2xl w-[90%] max-w-xl p-8">
 
             <button
-              onClick={() => {
-                setShowCompanyPopup(false);
-                setMessage("");
-              }}
+             onClick={() => {
+  setShowCompanyPopup(false);
+  setMessage("");
+  setIsRejected(false);
+}}
               className="absolute top-4 right-4 w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600"
             >
               ✕
@@ -129,28 +133,38 @@ export default function AboutCard({
             <div className="flex justify-center gap-4">
               <button
                 className="px-8 py-3 rounded-xl bg-green-600 hover:bg-green-700 text-white font-semibold"
-                onClick={() => {
-                  setMessage(
-                    "This event is only for new companies yet to be incorporated."
-                  );
-                }}
+onClick={() => {
+  setMessage(
+    "This event is only for new companies yet to be incorporated."
+  );
+  setIsRejected(true);
+}}
               >
                 Yes
               </button>
 
-              <button
-                className="px-8 py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold"
-                onClick={() => {
-                  window.open(
-                    "https://www.eventzgo.com/events/j57bq65wzwcb1gpaj9tfzvfbw5826wqt",
-                    "_blank"
-                  );
-                  setShowCompanyPopup(false);
-                  setMessage("");
-                }}
-              >
-                No
-              </button>
+<button
+  disabled={isRejected}
+  className={`px-8 py-3 rounded-xl text-white font-semibold transition ${
+    isRejected
+      ? "bg-gray-400 cursor-not-allowed"
+      : "bg-purple-600 hover:bg-purple-700"
+  }`}
+  onClick={() => {
+    if (isRejected) return;
+
+    window.open(
+      "https://www.eventzgo.com/events/j57bq65wzwcb1gpaj9tfzvfbw5826wqt",
+      "_blank"
+    );
+
+    setShowCompanyPopup(false);
+    setMessage("");
+    setIsRejected(false);
+  }}
+>
+  No
+</button>
             </div>
 
             {message && (
