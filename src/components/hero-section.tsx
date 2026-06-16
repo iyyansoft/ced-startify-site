@@ -204,7 +204,7 @@ export default function HeroSection() {
     flex
     justify-center
     lg:justify-end
-    mt-10
+    mt-20
     lg:mt-0
   "
   initial={{ opacity: 0, scale: 0.9 }}
@@ -228,17 +228,47 @@ export default function HeroSection() {
   />
 
 </motion.div>
-                <div className="flex items-center gap-3">
-                  <img
-                    src="/images/cm_vijay.jpg"
-                    alt="cm_Vijay"
-                    className="h-11 w-11 rounded-full object-cover ring-2 ring-purple-400/40"
-                  />
-                  <div>
-                    <p className="text-xs font-bold text-gray-800">C. Joseph Vijay</p>
-                    <p className="text-xs text-gray-500">Hon'ble Chief Minister of Tamil Nadu</p>
-                  </div>
-                </div>
+   <div className="flex items-center gap-4 mt-[-30px]">
+  <img
+    src="/images/cm_vijay.jpg"
+    alt="cm_Vijay"
+    className="
+  h-20
+  w-20
+  rounded-full
+  object-cover
+  border-4
+  border-white
+  shadow-lg
+  ring-2
+  ring-purple-300
+  flex-shrink-0
+"
+  />
+
+  <div className="flex flex-col">
+  {/* Quote */}
+  <p className="text-base sm:text-xl font-semibold italic text-[#7C3AED] mb-5">
+    “Tamil Nadu's ambition is to become a
+    <br />
+    $1.5 trillion economy by 2030”
+  </p>
+
+  {/* Image + Name Row */}
+  <div className="flex items-center gap-5">
+
+
+    <div>
+      <h3 className="text-2xl font-bold text-slate-900">
+        C. Joseph Vijay
+      </h3>
+
+      <p className="text-lg text-slate-500">
+        Hon'ble Chief Minister of Tamil Nadu
+      </p>
+    </div>
+  </div>
+</div></div>
 
                 <br></br>
 
