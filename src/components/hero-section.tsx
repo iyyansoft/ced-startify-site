@@ -229,22 +229,7 @@ export default function HeroSection() {
 
 </motion.div>
    <div className="flex items-center gap-4 mt-[-30px]">
-  <img
-    src="/images/cm_vijay.jpg"
-    alt="cm_Vijay"
-    className="
-  h-20
-  w-20
-  rounded-full
-  object-cover
-  border-4
-  border-white
-  shadow-lg
-  ring-2
-  ring-purple-300
-  flex-shrink-0
-"
-  />
+
 
   <div className="flex flex-col">
   {/* Quote */}
@@ -254,16 +239,17 @@ export default function HeroSection() {
     $1.5 trillion economy by 2030”
   </p>
 
+
   {/* Image + Name Row */}
   <div className="flex items-center gap-5">
 
 
     <div>
-      <h3 className="text-2xl font-bold text-slate-900">
+      <h3 className="text-xl font-bold text-slate-900">
         C. Joseph Vijay
       </h3>
 
-      <p className="text-lg text-slate-500">
+      <p className="text-sm text-slate-500">
         Hon'ble Chief Minister of Tamil Nadu
       </p>
     </div>
