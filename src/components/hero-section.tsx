@@ -236,7 +236,7 @@ export default function HeroSection() {
   <p className="text-base sm:text-xl font-semibold italic text-[#7C3AED] mb-5">
     “Tamil Nadu's ambition is to become a
     <br />
-    $1.5 trillion economy by 2030”
+    $1.5 trillion economy by 2036”
   </p>
 
 
