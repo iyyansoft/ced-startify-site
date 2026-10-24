@@ -251,7 +251,7 @@ o	Financial assistance for company incorporation (Women Faculty)
     title: "Industry Grand Challenge",
     description:
       "Engage innovators and startups to address real-world industry challenges.Encourage practical solutions through collaboration with industry experts.Drive innovation that creates impactful and scalable business outcomes. ",
-
+    eventzgoUrl: "https://www.eventzgo.com/events/j574fv3gphk7nmx00qrhzk2sr18gxrmn",
   },
 
 
