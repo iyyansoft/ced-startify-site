@@ -4,7 +4,7 @@ import AboutCard from "@/components/about-card";
 import { events } from "@/data";
 import { X, Sparkles, Route } from "lucide-react";
 
-import { Dialog } from "@/components/ui/dialog";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import EventDetailsDialog from "@/components/event-detail";
 
 const eligibilityData = [
@@ -198,42 +198,38 @@ export default function AboutEvent() {
         </div>
       </div>
 
-      {/* Poster Image Modal (for events with posterImage) */}
-      <AnimatePresence>
+      {/* Poster Image Modal — styled like EventDetailsDialog */}
+      <Dialog
+        open={!!selectedEvent && !!selectedEvent.posterImage}
+        onOpenChange={() => setSelectedEvent(null)}
+      >
         {selectedEvent && selectedEvent.posterImage && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.93 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.93 }}
-              transition={{ duration: 0.3 }}
-              className="relative flex flex-col items-center w-full max-w-2xl max-h-[92vh]"
-            >
-              {/* Close button */}
-              <button
-                onClick={() => setSelectedEvent(null)}
-                className="absolute -top-4 -right-4 z-10 bg-white text-[#7C3AED] rounded-full p-2 shadow-lg hover:scale-110 transition-transform duration-200"
-              >
-                <X className="w-5 h-5" />
-              </button>
+          <DialogContent className="sm:max-w-[700px] max-h-[90vh] overflow-y-auto p-0 border-0 bg-white rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.2)]">
 
-              {/* Poster */}
-              <div className="w-full overflow-hidden rounded-2xl shadow-2xl border-2 border-white/20 bg-white">
-                <img
-                  src={selectedEvent.posterImage}
-                  alt={selectedEvent.title}
-                  className="w-full h-auto object-contain max-h-[80vh]"
-                />
-              </div>
-
-              {/* Title below */}
-              <p className="mt-3 text-white font-bold text-center text-lg font-spaceGrotesk drop-shadow">
-                {selectedEvent.title}
+            {/* HEADER */}
+            <div className="p-6 border-b border-gray-100">
+              <h2 className="text-3xl font-extrabold mb-1">
+                <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-500 bg-clip-text text-transparent">
+                  {selectedEvent.title}
+                </span>
+              </h2>
+              <p className="text-sm text-gray-500 tracking-wide">
+                ✨ Startup Event Details
               </p>
-            </motion.div>
-          </div>
+            </div>
+
+            {/* POSTER — full width, scrollable */}
+            <div className="px-4 py-4 flex justify-center">
+              <img
+                src={selectedEvent.posterImage}
+                alt={selectedEvent.title}
+                className="w-[90%] h-auto object-contain rounded-xl"
+              />
+            </div>
+
+          </DialogContent>
         )}
-      </AnimatePresence>
+      </Dialog>
 
       {/* Standard Event Details Dialog (for events without posterImage) */}
       <Dialog
