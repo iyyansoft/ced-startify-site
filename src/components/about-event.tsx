@@ -198,8 +198,46 @@ export default function AboutEvent() {
         </div>
       </div>
 
+      {/* Poster Image Modal (for events with posterImage) */}
+      <AnimatePresence>
+        {selectedEvent && selectedEvent.posterImage && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.93 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.93 }}
+              transition={{ duration: 0.3 }}
+              className="relative flex flex-col items-center w-full max-w-2xl max-h-[92vh]"
+            >
+              {/* Close button */}
+              <button
+                onClick={() => setSelectedEvent(null)}
+                className="absolute -top-4 -right-4 z-10 bg-white text-[#7C3AED] rounded-full p-2 shadow-lg hover:scale-110 transition-transform duration-200"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              {/* Poster */}
+              <div className="w-full overflow-hidden rounded-2xl shadow-2xl border-2 border-white/20 bg-white">
+                <img
+                  src={selectedEvent.posterImage}
+                  alt={selectedEvent.title}
+                  className="w-full h-auto object-contain max-h-[80vh]"
+                />
+              </div>
+
+              {/* Title below */}
+              <p className="mt-3 text-white font-bold text-center text-lg font-spaceGrotesk drop-shadow">
+                {selectedEvent.title}
+              </p>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      {/* Standard Event Details Dialog (for events without posterImage) */}
       <Dialog
-        open={!!selectedEvent}
+        open={!!selectedEvent && !selectedEvent.posterImage}
         onOpenChange={() => setSelectedEvent(null)}
       >
         {selectedEvent && (
